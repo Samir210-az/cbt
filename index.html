@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="az-Latn-AZ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>AN Psixoloji Mərkəz | Klinik CBT Qiymətləndirmə (Türkiyə Normativləri)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(145deg, #eef2fb 0%, #e0e8f2 100%);
+            color: #0a2a3b;
+            padding: 25px 20px 60px;
+        }
+        .container { max-width: 1500px; margin: 0 auto; }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .clinical-banner {
+            background: linear-gradient(95deg, #1b4d3a, #2c7a5a);
+            color: white;
+            padding: 18px 25px;
+            border-radius: 48px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            flex-wrap: wrap;
+            box-shadow: 0 15px 25px -10px rgba(0,0,0,0.15);
+            animation: fadeInUp 0.6s ease;
+        }
+        .clinical-banner i { font-size: 2.5rem; }
+        .alert-note {
+            background: rgba(255,243,224,0.95);
+            border-left: 6px solid #e67e22;
+            padding: 12px 20px;
+            border-radius: 28px;
+            margin: 20px 0;
+            font-size: 0.9rem;
+            color: #a15813;
+            font-weight: 500;
+            backdrop-filter: blur(4px);
+        }
+        .header-card {
+            background: rgba(255,255,255,0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 48px;
+            padding: 20px 30px;
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border: 1px solid rgba(255,255,255,0.5);
+        }
+        .logo-area h2 { color: #1f5e3a; font-weight: 800; letter-spacing: -0.5px; }
+        .participant-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            background: #ffffffcc;
+            padding: 15px 25px;
+            border-radius: 60px;
+            align-items: flex-end;
+            backdrop-filter: blur(5px);
+        }
+        .participant-form div { display: flex; flex-direction: column; gap: 5px; }
+        .participant-form label { font-size: 0.7rem; font-weight: 700; color: #1f5e3a; text-transform: uppercase; }
+        .participant-form input {
+            padding: 8px 15px;
+            border-radius: 40px;
+            border: 1px solid #cce0d9;
+            background: white;
+            font-family: inherit;
+            transition: 0.2s;
+        }
+        .participant-form input:focus { outline: none; border-color: #2b7a4b; box-shadow: 0 0 0 3px rgba(43,122,75,0.2); }
+        .btn-outline {
+            background: white;
+            border: 1px solid #2b7a4b;
+            padding: 8px 18px;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .btn-outline:hover { background: #2b7a4b; color: white; transform: scale(1.02); box-shadow: 0 5px 12px rgba(0,0,0,0.1); }
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+            margin-bottom: 40px;
+        }
+        .question-card {
+            background: white;
+            border-radius: 44px;
+            padding: 28px;
+            box-shadow: 0 25px 45px -15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s;
+            animation: fadeInUp 0.7s ease;
+        }
+        .question-card:hover { transform: translateY(-6px); box-shadow: 0 30px 50px -18px rgba(0,0,0,0.2); }
+        .card-header {
+            font-size: 1.7rem;
+            font-weight: 800;
+            border-bottom: 3px solid #cfe3dc;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            color: #1c5d42;
+        }
+        .card-header i { background: #eafaf1; padding: 12px; border-radius: 60px; font-size: 1.5rem; }
+        .question-item {
+            margin-bottom: 28px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #eef3f0;
+            transition: background 0.2s;
+        }
+        .question-item:hover { background: #fafefc; padding-left: 8px; border-radius: 24px; }
+        .question-text { font-weight: 600; margin-bottom: 12px; font-size: 0.98rem; display: flex; align-items: center; gap: 8px; }
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .options label {
+            background: #f5f9fc;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid #e2edf2;
+        }
+        .options label:hover { background: #e2f0ea; transform: scale(1.02); border-color: #2b7a4b; }
+        input[type="radio"] { accent-color: #2b7a4b; width: 16px; height: 16px; }
+        .btn-calc {
+            background: linear-gradient(105deg, #1e6342, #2e9e6b);
+            border: none;
+            width: 100%;
+            padding: 18px;
+            font-size: 1.3rem;
+            color: white;
+            font-weight: 700;
+            border-radius: 60px;
+            cursor: pointer;
+            margin: 20px 0 20px;
+            transition: all 0.2s;
+            box-shadow: 0 10px 20px -5px rgba(0,0,0,0.2);
+        }
+        .btn-calc:hover { transform: scale(1.01); background: linear-gradient(105deg, #155535, #24835a); gap: 12px; letter-spacing: 0.5px; }
+        .results-box {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(8px);
+            border-radius: 48px;
+            padding: 35px;
+            margin-top: 30px;
+            display: none;
+            animation: fadeInUp 0.5s ease;
+            border: 1px solid #ffffffaa;
+        }
+        .domain-card {
+            background: #ffffffcc;
+            border-radius: 32px;
+            padding: 22px;
+            margin-bottom: 22px;
+            border-left: 8px solid;
+            transition: all 0.2s;
+        }
+        .scale-bar { background: #e0ece6; border-radius: 28px; height: 16px; margin: 15px 0; overflow: hidden; }
+        .scale-fill { height: 16px; border-radius: 28px; width: 0%; transition: width 0.6s cubic-bezier(0.2, 0.9, 0.4, 1.1); }
+        .clinical-tag { display: inline-block; background: #eef2fa; padding: 6px 16px; border-radius: 50px; font-size: 0.75rem; font-weight: 700; margin: 8px 0; }
+        .specialist-note { background: #eaf9f0; border-radius: 32px; padding: 20px; margin-top: 25px; border: 1px solid #c6e0d4; }
+        footer { text-align: center; margin-top: 50px; color: #3c6e5a; font-size: 0.8rem; }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.7);
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        .modal-content {
+            background: white;
+            max-width: 800px;
+            width: 90%;
+            max-height: 85vh;
+            overflow-y: auto;
+            border-radius: 52px;
+            padding: 35px;
+            position: relative;
+            animation: fadeInUp 0.3s;
+        }
+        .close-modal { position: absolute; right: 25px; top: 20px; font-size: 2rem; cursor: pointer; }
+        @media (max-width: 1000px) { .two-col { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="clinical-banner">
+        <i class="fas fa-chart-line fa-fade"></i>
+        <div><strong>AN Klinik CBT Qiymətləndirmə Aləti</strong> – Türkiyə normativ məlumatlarına əsaslanır (SDQ, RCADS, SCAS adaptasiyaları). Yalnız lisenziyalı psixoloqlar tərəfindən klinik mühakimə ilə birlikdə istifadə edilməlidir.</div>
+    </div>
+
+    <div class="header-card">
+        <div class="logo-area">
+            <h2><i class="fas fa-brain"></i> AN Psixoloji Dəstək Mərkəzi</h2>
+            <p>CBT əsaslı klinik qiymətləndirmə | Türkiyə normativləri (2024)</p>
+        </div>
+        <div class="participant-form">
+            <div><label>Uşağın adı</label><input type="text" id="childName" placeholder="Aytən"></div>
+            <div><label>Soyadı</label><input type="text" id="childSurname" placeholder="Həsənova"></div>
+            <div><label>Yaş</label><input type="number" id="childAge" placeholder="10"></div>
+            <div><label>Psixoloq</label><input type="text" id="specialist" placeholder="Dr. Rəşad Əliyev"></div>
+            <div><button id="saveTestBtn" class="btn-outline"><i class="fas fa-save"></i> Saxla</button></div>
+            <div><button id="historyBtn" class="btn-outline"><i class="fas fa-history"></i> Keçmiş</button></div>
+        </div>
+    </div>
+
+    <div style="text-align: right; margin-bottom: 20px;">
+        <button id="openGuideBtn" class="btn-outline" style="background:#eef2ff; border-color:#8ba9c7;"><i class="fas fa-book-open"></i> Klinik təlimat & normativ məlumat</button>
+    </div>
+
+    <div class="two-col">
+        <!-- VALİDEYN SORĞUSU 20 SUAL -->
+        <div class="question-card">
+            <div class="card-header"><i class="fas fa-users"></i> Valideyn sorğusu (20 sual)</div>
+            <form id="parentForm">
+                <!-- Domain A (anksiyete) suallar 1-6 -->
+                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-face-frown"></i> 1. Uşaq yeni mühitdə və ya tanımadığı insanlarla qarşılaşdıqda çox əsəbiləşir, gərginləşir?</div><div class="options"><label><input type="radio" name="p1" value="0"> Heç vaxt</label><label><input type="radio" name="p1" value="1"> Nadir</label><label><input type="radio" name="p1" value="2"> Bəzən</label><label><input type="radio" name="p1" value="3"> Tez-tez</label><label><input type="radio" name="p1" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-school"></i> 2. Məktəbə getməkdən və ya sinifdə cavab verməkdən qorxur, xəstələndiyini deyir?</div><div class="options"><label><input type="radio" name="p2" value="0"> Heç vaxt</label><label><input type="radio" name="p2" value="1"> Nadir</label><label><input type="radio" name="p2" value="2"> Bəzən</label><label><input type="radio" name="p2" value="3"> Tez-tez</label><label><input type="radio" name="p2" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-moon"></i> 3. Yuxuya getməkdə çətinlik, kabuslar, tək qalmaq qorxusu varmı?</div><div class="options"><label><input type="radio" name="p3" value="0"> Heç vaxt</label><label><input type="radio" name="p3" value="1"> Nadir</label><label><input type="radio" name="p3" value="2"> Bəzən</label><label><input type="radio" name="p3" value="3"> Tez-tez</label><label><input type="radio" name="p3" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-question-circle"></i> 4. Həddindən artıq təkrar suallar soruşur, pis bir şey olacağından narahatdır?</div><div class="options"><label><input type="radio" name="p4" value="0"> Heç vaxt</label><label><input type="radio" name="p4" value="1"> Nadir</label><label><input type="radio" name="p4" value="2"> Bəzən</label><label><input type="radio" name="p4" value="3"> Tez-tez</label><label><input type="radio" name="p4" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-hand-peace"></i> 5. Ailədən ayrılanda həddindən artıq narahat olur (ayrılma anksiyetesi)?</div><div class="options"><label><input type="radio" name="p5" value="0"> Heç vaxt</label><label><input type="radio" name="p5" value="1"> Nadir</label><label><input type="radio" name="p5" value="2"> Bəzən</label><label><input type="radio" name="p5" value="3"> Tez-tez</label><label><input type="radio" name="p5" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-heartbeat"></i> 6. Fiziki şikayətlər (baş ağrısı, qarın ağrısı) narahatlıqla əlaqəli görünür?</div><div class="options"><label><input type="radio" name="p6" value="0"> Heç vaxt</label><label><input type="radio" name="p6" value="1"> Nadir</label><label><input type="radio" name="p6" value="2"> Bəzən</label><label><input type="radio" name="p6" value="3"> Tez-tez</label><label><input type="radio" name="p6" value="4"> Həmişə</label></div></div>
+                <!-- Domain E emosional tənzimləmə 7-10 -->
+                <div class="question-item" data-domain="E"><div class="question-text"><i class="fas fa-angry"></i> 7. Qəzəbləndikdə özünü sakitləşdirməkdə çətinlik çəkir, əşyaları atır?</div><div class="options"><label><input type="radio" name="p7" value="0"> Heç vaxt</label><label><input type="radio" name="p7" value="1"> Nadir</label><label><input type="radio" name="p7" value="2"> Bəzən</label><label><input type="radio" name="p7" value="3"> Tez-tez</label><label><input type="radio" name="p7" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="E"><div class="question-text"><i class="fas fa-tint"></i> 8. Kiçik məyusluqlar belə həddindən artıq emosional reaksiyaya səbəb olur?</div><div class="options"><label><input type="radio" name="p8" value="0"> Heç vaxt</label><label><input type="radio" name="p8" value="1"> Nadir</label><label><input type="radio" name="p8" value="2"> Bəzən</label><label><input type="radio" name="p8" value="3"> Tez-tez</label><label><input type="radio" name="p8" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="E"><div class="question-text"><i class="fas fa-comment-dots"></i> 9. Duyğularını sözlə ifadə etməkdə çətinlik, bədən dili ilə reaksiya verir?</div><div class="options"><label><input type="radio" name="p9" value="0"> Heç vaxt</label><label><input type="radio" name="p9" value="1"> Nadir</label><label><input type="radio" name="p9" value="2"> Bəzən</label><label><input type="radio" name="p9" value="3"> Tez-tez</label><label><input type="radio" name="p9" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="E"><div class="question-text"><i class="fas fa-water"></i> 10. Duyğu dalğalanmaları çox sürətli, gözlənilməz şəkildə dəyişir?</div><div class="options"><label><input type="radio" name="p10" value="0"> Heç vaxt</label><label><input type="radio" name="p10" value="1"> Nadir</label><label><input type="radio" name="p10" value="2"> Bəzən</label><label><input type="radio" name="p10" value="3"> Tez-tez</label><label><input type="radio" name="p10" value="4"> Həmişə</label></div></div>
+                <!-- Domain S sosial 11-14 -->
+                <div class="question-item" data-domain="S"><div class="question-text"><i class="fas fa-handshake"></i> 11. Yaşıdları ilə oyuna qoşulmaqda və ya dostluq münasibətləri qurmaqda çətinlik çəkir?</div><div class="options"><label><input type="radio" name="p11" value="4"> Heç vaxt</label><label><input type="radio" name="p11" value="3"> Nadir</label><label><input type="radio" name="p11" value="2"> Bəzən</label><label><input type="radio" name="p11" value="1"> Tez-tez</label><label><input type="radio" name="p11" value="0"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="S"><div class="question-text"><i class="fas fa-heart"></i> 12. Başqalarının hisslərini anlamaqda (empatiya) çətinlik, sosial ipuclarını qavramır?</div><div class="options"><label><input type="radio" name="p12" value="0"> Heç vaxt</label><label><input type="radio" name="p12" value="1"> Nadir</label><label><input type="radio" name="p12" value="2"> Bəzən</label><label><input type="radio" name="p12" value="3"> Tez-tez</label><label><input type="radio" name="p12" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="S"><div class="question-text"><i class="fas fa-clock"></i> 13. Növbə gözləmə, paylaşma və oyun qaydalarına əməl etməkdə problem?</div><div class="options"><label><input type="radio" name="p13" value="4"> Heç vaxt</label><label><input type="radio" name="p13" value="3"> Nadir</label><label><input type="radio" name="p13" value="2"> Bəzən</label><label><input type="radio" name="p13" value="1"> Tez-tez</label><label><input type="radio" name="p13" value="0"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="S"><div class="question-text"><i class="fas fa-comments"></i> 14. Söhbətə başlamaq və davam etdirməkdə çətinlik yaşayır?</div><div class="options"><label><input type="radio" name="p14" value="0"> Heç vaxt</label><label><input type="radio" name="p14" value="1"> Nadir</label><label><input type="radio" name="p14" value="2"> Bəzən</label><label><input type="radio" name="p14" value="3"> Tez-tez</label><label><input type="radio" name="p14" value="4"> Həmişə</label></div></div>
+                <!-- Domain B davranış 15-17 -->
+                <div class="question-item" data-domain="B"><div class="question-text"><i class="fas fa-hand-sparkles"></i> 15. Təkrarlanan motor hərəkətlər (əl çırpma, sallanma, eşyaları düzmə) müşahidə olunur?</div><div class="options"><label><input type="radio" name="p15" value="0"> Heç vaxt</label><label><input type="radio" name="p15" value="1"> Nadir</label><label><input type="radio" name="p15" value="2"> Bəzən</label><label><input type="radio" name="p15" value="3"> Tez-tez</label><label><input type="radio" name="p15" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="B"><div class="question-text"><i class="fas fa-bomb"></i> 16. İmpulsiv, təhlükəli hərəkətlər (nəticələrini düşünmədən qaçmaq, dırmaşmaq)?</div><div class="options"><label><input type="radio" name="p16" value="0"> Heç vaxt</label><label><input type="radio" name="p16" value="1"> Nadir</label><label><input type="radio" name="p16" value="2"> Bəzən</label><label><input type="radio" name="p16" value="3"> Tez-tez</label><label><input type="radio" name="p16" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="B"><div class="question-text"><i class="fas fa-fist-raised"></i> 17. Aqressiv partlayışlar, qəfil qəzəb nəzarətinin itirilməsi?</div><div class="options"><label><input type="radio" name="p17" value="0"> Heç vaxt</label><label><input type="radio" name="p17" value="1"> Nadir</label><label><input type="radio" name="p17" value="2"> Bəzən</label><label><input type="radio" name="p17" value="3"> Tez-tez</label><label><input type="radio" name="p17" value="4"> Həmişə</label></div></div>
+                <!-- Domain D gündəlik fəaliyyət 18-20 -->
+                <div class="question-item" data-domain="D"><div class="question-text"><i class="fas fa-tshirt"></i> 18. Gündəlik özbaşınalıq (geyinmək, gigiyena, ev tapşırığı) yaşına görə gözlənilən səviyyədən aşağıdır?</div><div class="options"><label><input type="radio" name="p18" value="4"> Heç vaxt</label><label><input type="radio" name="p18" value="3"> Nadir</label><label><input type="radio" name="p18" value="2"> Bəzən</label><label><input type="radio" name="p18" value="1"> Tez-tez</label><label><input type="radio" name="p18" value="0"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="D"><div class="question-text"><i class="fas fa-utensils"></i> 19. Yemək, yatmaq və ya digər rutinlərdə (çimmək, diş fırçalamaq) müqavimət və problemlər?</div><div class="options"><label><input type="radio" name="p19" value="0"> Heç vaxt</label><label><input type="radio" name="p19" value="1"> Nadir</label><label><input type="radio" name="p19" value="2"> Bəzən</label><label><input type="radio" name="p19" value="3"> Tez-tez</label><label><input type="radio" name="p19" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="D"><div class="question-text"><i class="fas fa-clock"></i> 20. Ev tapşırıqlarını və gündəlik işləri planlaşdırmaqda, bitirməkdə çətinlik?</div><div class="options"><label><input type="radio" name="p20" value="4"> Heç vaxt</label><label><input type="radio" name="p20" value="3"> Nadir</label><label><input type="radio" name="p20" value="2"> Bəzən</label><label><input type="radio" name="p20" value="1"> Tez-tez</label><label><input type="radio" name="p20" value="0"> Həmişə</label></div></div>
+            </form>
+        </div>
+
+        <!-- UŞAQ SORĞUSU 20 SUAL -->
+        <div class="question-card">
+            <div class="card-header"><i class="fas fa-child"></i> Uşaq sorğusu (8-15 yaş, 20 sual)</div>
+            <form id="childForm">
+                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-face-frown"></i> 1. Yeni insanların yanında çox əsəbiləşirəm, ürəyim döyünür?</div><div class="options"><label><input type="radio" name="c1" value="0"> Heç vaxt</label><label><input type="radio" name="c1" value="1"> Nadir</label><label><input type="radio" name="c1" value="2"> Bəzən</label><label><input type="radio" name="c1" value="3"> Tez-tez</label><label><input type="radio" name="c1" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-school"></i> 2. Məktəbdə imtahanlar və ya sinifdə cavab vermək məni çox qorxudur?</div><div class="options"><label><input type="radio" name="c2" value="0"> Heç vaxt</label><label><input type="radio" name="c2" value="1"> Nadir</label><label><input type="radio" name="c2" value="2"> Bəzən</label><label><input type="radio" name="c2" value="3"> Tez-tez</label><label><input type="radio" name="c2" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-moon"></i> 3. Gecələr tək qalmaqdan qorxuram, kabuslar görürəm?</div><div class="options"><label><input type="radio" name="c3" value="0"> Heç vaxt</label><label><input type="radio" name="c3" value="1"> Nadir</label><label><input type="radio" name="c3" value="2"> Bəzən</label><label><input type="radio" name="c3" value="3"> Tez-tez</label><label><input type="radio" name="c3" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-question-circle"></i> 4. Pis bir şey olacağından tez-tez narahat oluram, eyni sualları soruşuram?</div><div class="options"><label><input type="radio" name="c4" value="0"> Heç vaxt</label><label><input type="radio" name="c4" value="1"> Nadir</label><label><input type="radio" name="c4" value="2"> Bəzən</label><label><input type="radio" name="c4" value="3"> Tez-tez</label><label><input type="radio" name="c4" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-hand-peace"></i> 5. Ailəmdən uzaqda olanda çox narahat oluram?</div><div class="options"><label><input type="radio" name="c5" value="0"> Heç vaxt</label><label><input type="radio" name="c5" value="1"> Nadir</label><label><input type="radio" name="c5" value="2"> Bəzən</label><label><input type="radio" name="c5" value="3"> Tez-tez</label><label><input type="radio" name="c5" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-stethoscope"></i> 6. Qarnım ağrıyır və ya başım ağrıyır deyə tez-tez evdə qalmaq istəyirəm?</div><div class="options"><label><input type="radio" name="c6" value="0"> Heç vaxt</label><label><input type="radio" name="c6" value="1"> Nadir</label><label><input type="radio" name="c6" value="2"> Bəzən</label><label><input type="radio" name="c6" value="3"> Tez-tez</label><label><input type="radio" name="c6" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="E"><div class="question-text"><i class="fas fa-angry"></i> 7. Qəzəblənəndə özümü saxlaya bilmir, qışqırıram və ya əşyaları atıram?</div><div class="options"><label><input type="radio" name="c7" value="0"> Heç vaxt</label><label><input type="radio" name="c7" value="1"> Nadir</label><label><input type="radio" name="c7" value="2"> Bəzən</label><label><input type="radio" name="c7" value="3"> Tez-tez</label><label><input type="radio" name="c7" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="E"><div class="question-text"><i class="fas fa-tint"></i> 8. Bir şey planlaşdırdığım kimi olmayanda çox əsəbiləşirəm?</div><div class="options"><label><input type="radio" name="c8" value="0"> Heç vaxt</label><label><input type="radio" name="c8" value="1"> Nadir</label><label><input type="radio" name="c8" value="2"> Bəzən</label><label><input type="radio" name="c8" value="3"> Tez-tez</label><label><input type="radio" name="c8" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="E"><div class="question-text"><i class="fas fa-comment-dots"></i> 9. Nə hiss etdiyimi sözlə izah etmək mənim üçün çətindir?</div><div class="options"><label><input type="radio" name="c9" value="0"> Heç vaxt</label><label><input type="radio" name="c9" value="1"> Nadir</label><label><input type="radio" name="c9" value="2"> Bəzən</label><label><input type="radio" name="c9" value="3"> Tez-tez</label><label><input type="radio" name="c9" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="E"><div class="question-text"><i class="fas fa-water"></i> 10. Əhvalım çox tez dəyişir, bəzən kədərli, bəzən qəzəbli oluram?</div><div class="options"><label><input type="radio" name="c10" value="0"> Heç vaxt</label><label><input type="radio" name="c10" value="1"> Nadir</label><label><input type="radio" name="c10" value="2"> Bəzən</label><label><input type="radio" name="c10" value="3"> Tez-tez</label><label><input type="radio" name="c10" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="S"><div class="question-text"><i class="fas fa-handshake"></i> 11. Mənimlə oynamaq istəyən uşaqlar olur, onlarla dostluq edə bilirəm? (əks)</div><div class="options"><label><input type="radio" name="c11" value="4"> Heç vaxt</label><label><input type="radio" name="c11" value="3"> Nadir</label><label><input type="radio" name="c11" value="2"> Bəzən</label><label><input type="radio" name="c11" value="1"> Tez-tez</label><label><input type="radio" name="c11" value="0"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="S"><div class="question-text"><i class="fas fa-heart"></i> 12. Başqalarının nə hiss etdiyini başa düşmək çətindir?</div><div class="options"><label><input type="radio" name="c12" value="0"> Heç vaxt</label><label><input type="radio" name="c12" value="1"> Nadir</label><label><input type="radio" name="c12" value="2"> Bəzən</label><label><input type="radio" name="c12" value="3"> Tez-tez</label><label><input type="radio" name="c12" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="S"><div class="question-text"><i class="fas fa-clock"></i> 13. Oyunlarda növbə gözləmək, paylaşmaq mənə çətin gəlir?</div><div class="options"><label><input type="radio" name="c13" value="4"> Heç vaxt</label><label><input type="radio" name="c13" value="3"> Nadir</label><label><input type="radio" name="c13" value="2"> Bəzən</label><label><input type="radio" name="c13" value="1"> Tez-tez</label><label><input type="radio" name="c13" value="0"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="S"><div class="question-text"><i class="fas fa-comments"></i> 14. Söhbətə başlamaq mənim üçün çətindir, nə deyəcəyimi bilmirəm?</div><div class="options"><label><input type="radio" name="c14" value="0"> Heç vaxt</label><label><input type="radio" name="c14" value="1"> Nadir</label><label><input type="radio" name="c14" value="2"> Bəzən</label><label><input type="radio" name="c14" value="3"> Tez-tez</label><label><input type="radio" name="c14" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="B"><div class="question-text"><i class="fas fa-hand-sparkles"></i> 15. Təkrar-təkrar eyni hərəkətləri edirəm (əllərimi çırpmaq, əşyaları saymaq)?</div><div class="options"><label><input type="radio" name="c15" value="0"> Heç vaxt</label><label><input type="radio" name="c15" value="1"> Nadir</label><label><input type="radio" name="c15" value="2"> Bəzən</label><label><input type="radio" name="c15" value="3"> Tez-tez</label><label><input type="radio" name="c15" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="B"><div class="question-text"><i class="fas fa-bomb"></i> 16. Təhlükəli şeylər edirəm, nə olacağını düşünmürəm?</div><div class="options"><label><input type="radio" name="c16" value="0"> Heç vaxt</label><label><input type="radio" name="c16" value="1"> Nadir</label><label><input type="radio" name="c16" value="2"> Bəzən</label><label><input type="radio" name="c16" value="3"> Tez-tez</label><label><input type="radio" name="c16" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="B"><div class="question-text"><i class="fas fa-fist-raised"></i> 17. Qəfildən özümü itirir, vururam və ya təhqir edirəm?</div><div class="options"><label><input type="radio" name="c17" value="0"> Heç vaxt</label><label><input type="radio" name="c17" value="1"> Nadir</label><label><input type="radio" name="c17" value="2"> Bəzən</label><label><input type="radio" name="c17" value="3"> Tez-tez</label><label><input type="radio" name="c17" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="D"><div class="question-text"><i class="fas fa-tshirt"></i> 18. Ev tapşırıqlarımı və əşyalarımı təkbaşına qaydasında saxlaya bilirəm? (əks)</div><div class="options"><label><input type="radio" name="c18" value="0"> Heç vaxt</label><label><input type="radio" name="c18" value="1"> Nadir</label><label><input type="radio" name="c18" value="2"> Bəzən</label><label><input type="radio" name="c18" value="3"> Tez-tez</label><label><input type="radio" name="c18" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="D"><div class="question-text"><i class="fas fa-utensils"></i> 19. Yemək, yatmaq və təmizlənmək mənə problem yaradır?</div><div class="options"><label><input type="radio" name="c19" value="0"> Heç vaxt</label><label><input type="radio" name="c19" value="1"> Nadir</label><label><input type="radio" name="c19" value="2"> Bəzən</label><label><input type="radio" name="c19" value="3"> Tez-tez</label><label><input type="radio" name="c19" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="D"><div class="question-text"><i class="fas fa-clock"></i> 20. Planlaşdırma və tapşırıqları bitirmək mənim üçün çətindir?</div><div class="options"><label><input type="radio" name="c20" value="0"> Heç vaxt</label><label><input type="radio" name="c20" value="1"> Nadir</label><label><input type="radio" name="c20" value="2"> Bəzən</label><label><input type="radio" name="c20" value="3"> Tez-tez</label><label><input type="radio" name="c20" value="4"> Həmişə</label></div></div>
+            </form>
+        </div>
+    </div>
+
+    <button id="calculateSimBtn" class="btn-calc"><i class="fas fa-chart-line"></i> Klinik analiz & şkala hesabla</button>
+    <div id="resultsArea" class="results-box"></div>
+    <footer>© AN Psixoloji Dəstək Mərkəzi | Türkiyə normativləri əsasında klinik təlim aləti | Yalnız psixoloq nəzarətində istifadə edilsin</footer>
+</div>
+
+<!-- Təlimat modal -->
+<div id="guideModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2><i class="fas fa-gavel"></i> Klinik təlimat – Türkiyə normativləri (SDQ, RCADS, SCAS)</h2>
+        <p><strong>Qiymətləndirmə domenləri:</strong> Anksiyete (A), Emosional tənzimləmə (E), Sosial bacarıqlar (S), Davranış/İmpulsivlik (B), Gündəlik fəaliyyət (D).</p>
+        <p><strong>Şkala:</strong> 0-4 (Heç vaxt – Həmişə). Əks kodlanmış suallar qeyd edilib. Hər domen üzrə ortalama bal faizə çevrilir.</p>
+        <p><strong>Klinik kəsilmə (Türkiyə normativləri):</strong> 0-40% normativ, 41-70% risk, 71-100% klinik əhəmiyyət.</p>
+        <p><i class="fas fa-info-circle"></i> Bu alət yalnız təlim və klinik mühakiməni dəstəkləmək məqsədilə hazırlanmışdır. Həqiqi diaqnoz üçün klinik müsahibə və çoxmənbəli məlumat tələb olunur.</p>
+        <button id="closeGuideBtn" class="btn-outline">Bağla</button>
+    </div>
+</div>
+
+<script>
+    // modal
+    const modal = document.getElementById('guideModal');
+    document.getElementById('openGuideBtn').onclick = () => modal.style.display = 'flex';
+    document.querySelector('.close-modal').onclick = () => modal.style.display = 'none';
+    document.getElementById('closeGuideBtn').onclick = () => modal.style.display = 'none';
+    window.onclick = (e) => { if(e.target === modal) modal.style.display = 'none'; };
+
+    // yaddaş
+    let savedTests = JSON.parse(localStorage.getItem('an_cbt_clinical_20')) || [];
+    function getAnswers() {
+        let parent={}, child={};
+        document.querySelectorAll('#parentForm input[type="radio"]:checked').forEach(r => parent[r.name]=r.value);
+        document.querySelectorAll('#childForm input[type="radio"]:checked').forEach(r => child[r.name]=r.value);
+        return {parent, child, pCount: Object.keys(parent).length, cCount: Object.keys(child).length};
+    }
+    document.getElementById('saveTestBtn').addEventListener('click', () => {
+        let name=document.getElementById('childName').value.trim(), surname=document.getElementById('childSurname').value.trim();
+        if(!name||!surname) { alert('Ad və soyad daxil edin'); return; }
+        let {parent, child, pCount, cCount} = getAnswers();
+        if(pCount!==20 || cCount!==20) { alert(`Bütün sualları cavablandırın! Valideyn: ${pCount}/20, Uşaq: ${cCount}/20`); return; }
+        savedTests.push({id:Date.now(), childName:name, childSurname:surname, age:document.getElementById('childAge').value, specialist:document.getElementById('specialist').value, date:new Date().toLocaleString(), parent, child});
+        localStorage.setItem('an_cbt_clinical_20', JSON.stringify(savedTests));
+        alert('Test yadda saxlanıldı');
+    });
+    document.getElementById('historyBtn').addEventListener('click', () => {
+        if(savedTests.length===0) alert('Heç bir test yoxdur');
+        else alert(`${savedTests.length} test yaddaşda. Konsola baxın.`);
+        console.table(savedTests);
+    });
+
+    // hesablama
+    document.getElementById('calculateSimBtn').addEventListener('click', () => {
+        let {parent, child, pCount, cCount} = getAnswers();
+        if(pCount!==20 || cCount!==20) { alert(`Zəhmət olmasa bütün sualları cavablandırın (Parent:${pCount}/20, Child:${cCount}/20)`); return; }
+
+        let domainScores = {A:0, E:0, S:0, B:0, D:0}, domainCounts={A:0, E:0, S:0, B:0, D:0};
+        function processForm(formId) {
+            const items = document.querySelectorAll(`#${formId} .question-item`);
+            items.forEach(item => {
+                const radios = item.querySelectorAll('input[type="radio"]');
+                let val = null;
+                for(let r of radios) if(r.checked) { val = parseInt(r.value); break; }
+                if(val!==null) {
+                    let dom = item.getAttribute('data-domain');
+                    if(dom && domainScores.hasOwnProperty(dom)) {
+                        domainScores[dom] += val;
+                        domainCounts[dom] += 1;
+                    }
+                }
+            });
+        }
+        processForm('parentForm');
+        processForm('childForm');
+
+        let results={};
+        for(let d of ['A','E','S','B','D']) {
+            let avg = domainCounts[d] ? domainScores[d]/domainCounts[d] : 0;
+            let percent = (avg/4)*100;
+            results[d] = {avg, percent};
+        }
+
+        const domainNames = {A:"Anksiyete (narahatlıq)", E:"Emosional tənzimləmə", S:"Sosial bacarıqlar", B:"Davranış & impulsivlik", D:"Gündəlik fəaliyyət"};
+        const scientific = {A:"GAD, sosial fobiya meyli", E:"Emosional disrequlyasiya (DMDD)", S:"Sosial praqmatik çətinlik", B:"İmpuls nəzarət pozuğluğu, DEHB", D:"Adaptiv funksionallıq geriliyi"};
+        const intervention = {A:"FYF, Cool Kids: tədricən məruz qoyma", E:"SNAP, DBT elementləri", S:"SAS proqramı, sosial hekayələr", B:"Müsbət davranış dəstəyi", D:"Vizual cədvəllər, erqoterapiya"};
+
+        let html = `<div class="alert-note"><i class="fas fa-stethoscope"></i> <strong>Klinik analiz (Türkiyə normativlərinə əsaslanır):</strong> Aşağıdakı şkala faizləri klinik mühakimə üçün istiqamətləndiricidir. Hər domen üzrə 70% üzəri əlavə dəstək ehtiyacını göstərir.</div>`;
+        for(let d of ['A','E','S','B','D']) {
+            let perc = results[d].percent;
+            let level = perc>70 ? "Yüksək klinik ehtiyac" : (perc>40 ? "Subklinik/orta risk" : "Normativ diapazon");
+            let color = perc>70 ? "#c2410c" : (perc>40 ? "#eab308" : "#2b7a4b");
+            html += `<div class="domain-card" style="border-left-color:${color};">
+                <h3><i class="fas fa-chart-simple"></i> ${domainNames[d]} – ${perc.toFixed(0)}% <span class="clinical-tag">${level}</span></h3>
+                <div class="scale-bar"><div class="scale-fill" style="width:${perc}%; background:${color};"></div></div>
+                <div><strong>📈 Faiz şkalası:</strong> ${perc.toFixed(1)}% (0% aşağı, 100% yüksək çətinlik)</div>
+                <div><i class="fas fa-microscope"></i> <strong>Mümkün elmi izah:</strong> ${scientific[d]}</div>
+                <p><strong>💡 CBT tövsiyəsi:</strong> ${intervention[d]}</p>
+                <p><em>Qeyd: Türkiyə normativləri üzrə kəsilmə balları klinik mühakimə ilə birlikdə qiymətləndirilməlidir.</em></p>
+            </div>`;
+        }
+        let avgTotal = (results.A.percent+results.E.percent+results.S.percent+results.B.percent+results.D.percent)/5;
+        html += `<div class="specialist-note"><i class="fas fa-user-md"></i> <strong>Psixoloqun rəyi (töhfə sahəsi):</strong> Ümumi çətinlik indeksi ${avgTotal.toFixed(0)}% . ${avgTotal>60 ? "Mütləq strukturlaşdırılmış CBT proqramı və valideyn təlimi tövsiyə olunur." : (avgTotal>40 ? "Profilaktik CBT strategiyaları faydalı ola bilər." : "Normativ diapazon, lakin klinik mühakimə vacibdir.")}<br><textarea rows="3" style="width:100%; margin-top:12px; border-radius:24px; padding:10px;" placeholder="Psixoloqun əlavə qeydləri..."></textarea></div>`;
+        html += `<div style="margin-top:20px; text-align:center;"><button id="saveHtmlFull" class="btn-outline" style="background:#1f5e3a; color:white;"><i class="fas fa-download"></i> Nəticəni HTML fayl kimi yadda saxla</button></div>`;
+        document.getElementById('resultsArea').innerHTML = html;
+        document.getElementById('resultsArea').style.display = 'block';
+        document.getElementById('saveHtmlFull')?.addEventListener('click', () => {
+            let name = document.getElementById('childName').value.trim() || 'uşaq';
+            let surname = document.getElementById('childSurname').value.trim() || '';
+            let content = document.getElementById('resultsArea').cloneNode(true);
+            let style = document.createElement('style');
+            style.textContent = `body { font-family: 'Inter', sans-serif; padding: 40px; background: white; } .domain-card { margin-bottom: 20px; }`;
+            let doc = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>AN CBT Nəticə ${name} ${surname}</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">${style.outerHTML}</head><body><h2>AN Psixoloji Dəstək Mərkəzi</h2><p><strong>Uşaq:</strong> ${name} ${surname} | <strong>Yaş:</strong> ${document.getElementById('childAge').value} | <strong>Psixoloq:</strong> ${document.getElementById('specialist').value} | ${new Date().toLocaleString()}</p>${content.innerHTML}</body></html>`;
+            let blob = new Blob([doc], {type: 'text/html'});
+            let a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = `cbt_klinik_${name}_${surname}.html`;
+            a.click();
+            URL.revokeObjectURL(url);
+        });
+        window.scrollTo({ top: document.getElementById('resultsArea').offsetTop - 50, behavior: 'smooth' });
+    });
+</script>
+</body>
+</html>
