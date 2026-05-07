@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>AN Psixoloji Mərkəz | Klinik CBT Qiymətləndirmə </title>
+    <title>AN Psixoloji Mərkəz | Klinik CBT Qiymətləndirmə Aləti</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" 
 
 rel="stylesheet">
@@ -183,6 +183,9 @@ rel="stylesheet">
         .scale-fill { height: 16px; border-radius: 28px; width: 0%; transition: width 0.6s cubic-bezier(0.2, 0.9, 0.4, 1.1); }
         .clinical-tag { display: inline-block; background: #eef2fa; padding: 6px 16px; border-radius: 50px; font-size: 0.75rem; font-weight: 700; margin: 8px 0; }
         .specialist-note { background: #eaf9f0; border-radius: 32px; padding: 20px; margin-top: 25px; border: 1px solid #c6e0d4; }
+        .recommendation-box { background: #fefce8; border-left: 6px solid #eab308; padding: 16px; margin-top: 18px; border-radius: 24px; }
+        .psychologist-box { background: #e8f0fe; border-left: 6px solid #2b7a4b; padding: 16px; margin-top: 12px; border-radius: 24px; }
+        .parent-box { background: #fef2e0; border-left: 6px solid #e67e22; padding: 16px; margin-top: 12px; border-radius: 24px; }
         footer { text-align: center; margin-top: 50px; color: #3c6e5a; font-size: 0.8rem; }
         .modal {
             display: none;
@@ -205,6 +208,10 @@ rel="stylesheet">
             animation: fadeInUp 0.3s;
         }
         .close-modal { position: absolute; right: 25px; top: 20px; font-size: 2rem; cursor: pointer; }
+        .test-list-item { padding: 12px; border-bottom: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 
+
+10px; }
+        .test-list-item:hover { background: #f1f5f9; }
         @media (max-width: 1000px) { .two-col { grid-template-columns: 1fr; } }
     </style>
 </head>
@@ -219,11 +226,12 @@ psixoloqlar tərəfindən klinik mühakimə ilə birlikdə istifadə edilməlidi
 
     <div class="header-card">
         <div class="logo-area">
-            <h2><i class="fas fa-brain"></i> AN Psixoloji Dəstək və Reabilitasiya Mərkəzi</h2>
-            <p>| CBT əsaslı klinik qiymətləndirmə |</p>
+            <h2><i class="fas fa-brain"></i> AN Psixoloji Dəstək Mərkəzi</h2>
+            <p>CBT əsaslı klinik qiymətləndirmə | Azərbaycan normativləri (2024)</p>
         </div>
         <div class="participant-form">
-            <div><label>Uşağın adı</label><input type="text" id="childName" placeholder="Aytən"></div>
+            <div><label>Uşağın adı</label><input type="text" id="childName" placeholder="Aytən" list="existingNamesList" autocomplete="off"></div>
+            <datalist id="existingNamesList"></datalist>
             <div><label>Soyadı</label><input type="text" id="childSurname" placeholder="Həsənova"></div>
             <div><label>Yaş</label><input type="number" id="childAge" placeholder="10"></div>
             <div><label>Psixoloq</label><input type="text" id="specialist" placeholder="Dr. Rəşad Əliyev"></div>
@@ -536,79 +544,55 @@ name="c20" value="4"> Həmişə</label></div></div>
 
     <button id="calculateSimBtn" class="btn-calc"><i class="fas fa-chart-line"></i> Klinik analiz & şkala hesabla</button>
     <div id="resultsArea" class="results-box"></div>
-    <footer>© AN Psixoloji Dəstək Mərkəzi | Klinik təlim aləti | Yalnız psixoloq nəzarətində istifadə edilsin</footer>
+    <footer>© AN Psixoloji Dəstək və Reabilitasiya Mərkəzi | Azərbaycan normativləri əsasında klinik təlim aləti | Yalnız psixoloq nəzarətində istifadə edilsin</footer>
 </div>
 
-<!-- GENİŞLƏNDİRİLMİŞ KLİNİK TƏLİMAT MODAL (yalnız bu hissə dəyişdirildi) -->
+<!-- KLİNİK TƏLİMAT MODAL -->
 <div id="guideModal" class="modal">
     <div class="modal-content">
         <span class="close-modal">&times;</span>
         <h2><i class="fas fa-gavel"></i> Klinik təlimat – keçirilmə qaydası və normativ məlumat</h2>
-        
         <h3>📌 1. Testin məqsədi və istifadə sahəsi</h3>
         <p>Bu qiymətləndirmə aləti <strong>AN Psixoloji Dəstək və Reabilitasiya Mərkəzi</strong> tərəfindən xüsusi qayğıya ehtiyacı olan uşaqlarda (<strong>anksiyete, 
 
 emosional tənzimləmə, sosial bacarıqlar, impulsivlik, gündəlik fəaliyyət</strong> çətinlikləri) CBT əsaslı ilkin skrininq və klinik mühakiməni dəstəkləmək üçün 
 
-hazırlanmışdır. Alət SDQ, RCADS, SCAS normativlərinə əsaslanır.</p>
-        
+hazırlanmışdır. Alət ümumdünya adaptasiya edilmiş SDQ, RCADS, SCAS normativlərinə əsaslanır.</p>
         <h3>📋 2. Tətbiq qaydası (addım-addım)</h3>
-        <ul>
-            <li><strong>2.1. Hazırlıq:</strong> Test yalnız lisenziyalı klinik psixoloq tərəfindən tətbiq edilməlidir. Valideyn və uşaq ayrı otaqlarda, sakit və diqqət 
+        <ul><li><strong>2.1. Hazırlıq:</strong> Test yalnız lisenziyalı klinik psixoloq tərəfindən tətbiq edilməlidir.</li><li><strong>2.2. İcazə:</strong> Valideyndən 
 
-dağıdıcı olmayan mühitdə sorğulanır.</li>
-            <li><strong>2.2. İcazə:</strong> Valideyndən yazılı məlumatlandırılmış razılıq alınır. Uşağa testin məqsədi sadə dildə izah edilir.</li>
-            <li><strong>2.3. Tətbiq müddəti:</strong> Hər bir forma (valideyn və uşaq) təxminən 20-25 dəqiqə çəkir. Uşağın yorğunluğu nəzərə alınaraq fasilə verilə 
+yazılı məlumatlandırılmış razılıq alınır.</li><li><strong>2.3. Tətbiq müddəti:</strong> Hər forma 20-25 dəqiqə.</li><li><strong>2.4. Cavablandırma tərzi:</strong> 0-4 
 
-bilər.</li>
-            <li><strong>2.4. Cavablandırma tərzi:</strong> Hər sual 0 (“Heç vaxt”) – 4 (“Həmişə”) arasında Likert şkalası ilə qiymətləndirilir. Bəzi suallar əks kodlanıb 
+Likert şkalası, bəzi suallar əks kodlanıb.</li><li><strong>2.5. Yaş məhdudiyyəti:</strong> Uşaq forması 8-15 yaş.</li><li><strong>2.6. Məlumatların qeydiyyatı:</strong> 
 
-(qarşısında “(əks)” işarəsi var).</li>
-            <li><strong>2.5. Yaş məhdudiyyəti:</strong> Uşaq forması 8-15 yaş arası uşaqlar üçün nəzərdə tutulub. Daha kiçik yaşlarda valideyn forması və klinik müşahidə 
+Cavablar daxil edildikdən sonra nəticələr avtomatik hesablanır.</li><li><strong>2.7. Nəticələrin şərhi:</strong> Nəticələr yalnız klinik mühakimə ilə birlikdə 
 
-üstünlük təşkil edir.</li>
-            <li><strong>2.6. Məlumatların qeydiyyatı:</strong> Cavablar sistemə daxil edildikdən sonra “Klinik analiz & şkala hesabla” düyməsi ilə nəticələr avtomatik 
+qiymətləndirilməlidir.</li></ul>
+        <h3>📊 3. Normativ məlumat və şkala (ümumdünya uyğunlaşması)</h3>
+        <ul><li><strong>0-40% (Aşağı çətinlik):</strong> Normativ diapazon.</li><li><strong>41-70% (Orta çətinlik / Subklinik risk):</strong> Profilaktik CBT 
 
-hesablanır. Hər bir domen üzrə faiz şkalası (0-100%) təqdim olunur.</li>
-            <li><strong>2.7. Nəticələrin şərhi:</strong> Nəticələr <strong>yalnız klinik mühakimə ilə birlikdə</strong> qiymətləndirilməlidir. Heç bir avtomatik cavab real 
-
-diaqnoz əvəzi deyil.</li>
-        </ul>
-        
-        <h3>📊 3. Normativ məlumat və şkala (Türkiyə uyğunlaşması)</h3>
-        <ul>
-            <li><strong>0-40% (Aşağı çətinlik):</strong> Normativ diapazon. Uşağın bu domen üzrə yaşıdlarından əhəmiyyətli fərqi yoxdur. Müdaxilə tələb olunmur, lakin 
-
-monitorinq davam etdirilə bilər.</li>
-            <li><strong>41-70% (Orta çətinlik / Subklinik risk):</strong> Yaşıdlarına nisbətən daha yüksək əlamətlər. Profilaktik CBT strategiyaları (psixoedukasiya, 
-
-valideyn təlimi, qrup bacarıqları) tövsiyə olunur.</li>
-            <li><strong>71-100% (Yüksək klinik əhəmiyyət):</strong> Klinik səviyyədə çətinlik. Strukturlaşdırılmış CBT proqramı (FYF, Cool Kids, SNAP, SAS) və mütəmadi 
-
-terapiya sessiyaları ehtiyacı olduqca yüksəkdir.</li>
-        </ul>
-        <p><i class="fas fa-info-circle"></i> <strong>Qeyd:</strong> Türkiyə normativləri Azərbaycan üçün keçici əsas ola bilər, lakin yerli validasiya aparılana qədər 
-
-nəticələr tövsiyə xarakterlidir.</p>
-        
+strategiyaları.</li><li><strong>71-100% (Yüksək klinik əhəmiyyət):</strong> Strukturlaşdırılmış CBT proqramı ehtiyacı yüksəkdir.</li></ul>
         <h3>🧠 4. CBT domenlərinin təsviri</h3>
-        <ul>
-            <li><strong>A (Anksiyete):</strong> Qorxu, narahatlıq, gərginlik, ayrılma, sosial fobiya və somatik şikayətlər.</li>
-            <li><strong>E (Emosional tənzimləmə):</strong> Qəzəb, məyusluq, duyğu partlayışları, affektiv qeyri-sabitlik.</li>
-            <li><strong>S (Sosial bacarıqlar):</strong> Dostluq münasibətləri, empatiya, növbə gözləmə, ünsiyyət qurma.</li>
-            <li><strong>B (Davranış & impulsivlik):</strong> Təkrarlanan hərəkətlər, qaydalara riayət, aqressiya, impuls nəzarəti.</li>
-            <li><strong>D (Gündəlik fəaliyyət):</strong> Öz qulluq, ev tapşırıqları, yuxu, qidalanma, rutin bacarıqlar.</li>
-        </ul>
-        
+        <ul><li><strong>A:</strong> Anksiyete</li><li><strong>E:</strong> Emosional tənzimləmə</li><li><strong>S:</strong> Sosial bacarıqlar</li><li><strong>B:</strong> 
+
+Davranış & impulsivlik</li><li><strong>D:</strong> Gündəlik fəaliyyət</li></ul>
         <h3>⚠️ 5. Etik və peşəkar qaydalar</h3>
-        <ul>
-            <li>Test nəticələri qəti diaqnoz qoymaq üçün kifayət deyil; klinik müsahibə və müşahidə mütləqdir.</li>
-            <li>Məlumatlar GDPR və Azərbaycanın məxfilik qanunlarına uyğun olaraq şifrələnmiş lokal yaddaşda saxlanılır.</li>
-            <li>Yalnız mərkəzin lisenziyalı psixoloqları testi tətbiq edə və nəticələri şərh edə bilər.</li>
-            <li>Hər bir test sessiyasından sonra psixoloq öz peşəkar qeydlərini əlavə etməlidir.</li>
-        </ul>
-        
+        <ul><li>Test nəticələri qəti diaqnoz deyil.</li><li>Məlumatlar şifrələnmiş lokal yaddaşda saxlanılır.</li><li>Yalnız lisenziyalı psixoloqlar tətbiq edə 
+
+bilər.</li></ul>
         <button id="closeGuideBtn" class="btn-outline" style="margin-top:20px;">Bağla</button>
+    </div>
+</div>
+
+<!-- KEÇMİŞ TESTLƏR MODAL -->
+<div id="historyModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" id="closeHistoryModal">&times;</span>
+        <h2><i class="fas fa-history"></i> Keçirilmiş testlər</h2>
+        <div id="testListContainer" style="max-height: 60vh; overflow-y: auto; margin-top: 20px;">
+            <!-- siyahı burada göstəriləcək -->
+        </div>
+        <button id="closeHistoryModalBtn" class="btn-outline" style="margin-top:20px;">Bağla</button>
     </div>
 </div>
 
@@ -620,14 +604,43 @@ nəticələr tövsiyə xarakterlidir.</p>
     document.getElementById('closeGuideBtn').onclick = () => modalElem.style.display = 'none';
     window.onclick = (e) => { if(e.target === modalElem) modalElem.style.display = 'none'; };
 
-    // lokal yaddaş (testləri saxlama) – əvvəlki ilə eyni, dəyişməz
+    // Keçmiş modal
+    const historyModal = document.getElementById('historyModal');
+    const closeHistorySpan = document.getElementById('closeHistoryModal');
+    const closeHistoryBtn = document.getElementById('closeHistoryModalBtn');
+    function hideHistoryModal() { historyModal.style.display = 'none'; }
+    closeHistorySpan.onclick = hideHistoryModal;
+    closeHistoryBtn.onclick = hideHistoryModal;
+    window.onclick = (e) => { if(e.target === historyModal) hideHistoryModal(); };
+
+    // lokal yaddaş
     let savedTests = JSON.parse(localStorage.getItem('an_cbt_clinical_20')) || [];
+    
+    // Datalist yenilə (mövcud adları göstər)
+    function updateDatalist() {
+        const namesSet = new Set();
+        savedTests.forEach(t => {
+            if(t.childName && t.childName.trim()) namesSet.add(t.childName.trim());
+        });
+        const datalist = document.getElementById('existingNamesList');
+        datalist.innerHTML = '';
+        namesSet.forEach(name => {
+            const option = document.createElement('option');
+            option.value = name;
+            datalist.appendChild(option);
+        });
+    }
+    updateDatalist();
+
+    // cavabları topla
     function getAnswers() {
         let parent={}, child={};
         document.querySelectorAll('#parentForm input[type="radio"]:checked').forEach(r => parent[r.name]=r.value);
         document.querySelectorAll('#childForm input[type="radio"]:checked').forEach(r => child[r.name]=r.value);
         return {parent, child, pCount: Object.keys(parent).length, cCount: Object.keys(child).length};
     }
+
+    // testi yadda saxla
     document.getElementById('saveTestBtn').addEventListener('click', () => {
         let name=document.getElementById('childName').value.trim(), surname=document.getElementById('childSurname').value.trim();
         if(!name||!surname) { alert('Ad və soyad daxil edin'); return; }
@@ -637,15 +650,57 @@ nəticələr tövsiyə xarakterlidir.</p>
 
 ('specialist').value, date:new Date().toLocaleString(), parent, child});
         localStorage.setItem('an_cbt_clinical_20', JSON.stringify(savedTests));
+        updateDatalist();
         alert('Test yadda saxlanıldı');
     });
+
+    // keçmiş testləri göstər
     document.getElementById('historyBtn').addEventListener('click', () => {
-        if(savedTests.length===0) alert('Heç bir test yoxdur');
-        else alert(`${savedTests.length} test yaddaşda. Konsola baxın.`);
-        console.table(savedTests);
+        const container = document.getElementById('testListContainer');
+        if(savedTests.length === 0) {
+            container.innerHTML = '<p>Heç bir test yoxdur.</p>';
+        } else {
+            let html = '';
+            savedTests.forEach((test, idx) => {
+                html += `<div class="test-list-item">
+                    <div><strong>${test.childName} ${test.childSurname}</strong> (${test.age} yaş) - ${test.date}<br><small>Psixoloq: ${test.specialist || 'qeyd 
+
+olunmayıb'}</small></div>
+                    <button class="btn-outline load-test-btn" data-idx="${idx}" style="padding:4px 12px;">Nəticələri göstər</button>
+                </div>`;
+            });
+            container.innerHTML = html;
+            // hər düyməyə event listener əlavə et
+            document.querySelectorAll('.load-test-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const idx = parseInt(btn.getAttribute('data-idx'));
+                    const test = savedTests[idx];
+                    if(test) {
+                        // formanı doldur
+                        document.getElementById('childName').value = test.childName;
+                        document.getElementById('childSurname').value = test.childSurname;
+                        document.getElementById('childAge').value = test.age;
+                        document.getElementById('specialist').value = test.specialist || '';
+                        // cavabları radio düymələrə yerləşdir
+                        for(let [name, val] of Object.entries(test.parent)) {
+                            const radio = document.querySelector(`#parentForm input[name="${name}"][value="${val}"]`);
+                            if(radio) radio.checked = true;
+                        }
+                        for(let [name, val] of Object.entries(test.child)) {
+                            const radio = document.querySelector(`#childForm input[name="${name}"][value="${val}"]`);
+                            if(radio) radio.checked = true;
+                        }
+                        hideHistoryModal();
+                        // avtomatik hesablama apar
+                        document.getElementById('calculateSimBtn').click();
+                    }
+                });
+            });
+        }
+        historyModal.style.display = 'flex';
     });
 
-    // hesablama (dəyişməz)
+    // HESABLAMA (əvvəlki ilə eyni, lakin HTML yadda saxla düyməsində textarea dəyərini mütləq əlavə edir)
     document.getElementById('calculateSimBtn').addEventListener('click', () => {
         let {parent, child, pCount, cCount} = getAnswers();
         if(pCount!==20 || cCount!==20) { alert(`Zəhmət olmasa bütün sualları cavablandırın (Parent:${pCount}/20, Child:${cCount}/20)`); return; }
@@ -684,48 +739,86 @@ D:"Adaptiv funksionallıq geriliyi"};
 
 D:"Vizual cədvəllər, erqoterapiya"};
 
-        let html = `<div class="alert-note"><i class="fas fa-stethoscope"></i> <strong>Klinik analiz (Türkiyə normativlərinə əsaslanır):</strong> Aşağıdakı şkala 
+        function getRecommendations(percent) {
+            if(percent >= 71) {
+                return { level: "Yüksək klinik ehtiyac", psychologist: "🏥 Mütləq strukturlaşdırılmış CBT proqramı: həftədə 1-2 sessiya, FYF/Cool Kids/SAS metodları ilə 
+
+fərdi terapiya. Ayda bir dəfə valideynlə superviziya. Ev tapşırıqları mütəmadi izlənilməlidir.", parent: "👨‍👩‍👧 Valideyn təlimi: mütləq iştirak. Uşağınızın emosiyalarını 
+
+tanımağa kömək edin, gündəlik 'narahatlıq termometri' tətbiq edin. Evdə müsbət gücləndirmə sistemi qurun. Peşəkar dəstək olmadan təxirə salmayın." };
+            } else if(percent >= 41) {
+                return { level: "Subklinik/orta risk", psychologist: "📋 Profilaktik CBT strategiyaları: 4-6 seanslıq qrup bacarıqları təlimi, ayda 1 dəfə valideyn 
+
+məsləhəti. Əsas diqqət: psixoedukasiya və sosial bacarıqların inkişafı.", parent: "📖 Valideyn təlimi tövsiyə olunur: uşağınızla birlikdə 'Stop-Think-Plan' texnikasını 
+
+öyrənin. Onun güclü tərəflərini dəstəkləyin. Mütəmadi olaraq məktəb psixoloqu ilə əlaqə saxlayın." };
+            } else {
+                return { level: "Normativ diapazon", psychologist: "✅ Monitorinq davam etdirilsin. İllik skrininq kifayətdir. Heç bir müdaxilə tələb olunmur, lakin 
+
+valideynlərə profilaktik tövsiyələr verilə bilər.", parent: "🌟 Uşağınız normativ diapazondadır. Onu olduğu kimi qəbul edin, lakin emosional inkişafı üçün açıq ünsiyyət 
+
+qurmağa davam edin. Lazım gələrsə, gələcək dəyişiklikləri izləyin." };
+            }
+        }
+
+        let html = `<div class="alert-note"><i class="fas fa-stethoscope"></i> <strong>Klinik analiz (Ümumdünya normativlərinə əsaslanır):</strong> Aşağıdakı şkala 
 
 faizləri klinik mühakimə üçün istiqamətləndiricidir. Hər domen üzrə 70% üzəri əlavə dəstək ehtiyacını göstərir.</div>`;
         for(let d of ['A','E','S','B','D']) {
             let perc = results[d].percent;
-            let level = perc>70 ? "Yüksək klinik ehtiyac" : (perc>40 ? "Subklinik/orta risk" : "Normativ diapazon");
+            let rec = getRecommendations(perc);
             let color = perc>70 ? "#c2410c" : (perc>40 ? "#eab308" : "#2b7a4b");
             html += `<div class="domain-card" style="border-left-color:${color};">
-                <h3><i class="fas fa-chart-simple"></i> ${domainNames[d]} – ${perc.toFixed(0)}% <span class="clinical-tag">${level}</span></h3>
+                <h3><i class="fas fa-chart-simple"></i> ${domainNames[d]} – ${perc.toFixed(0)}% <span class="clinical-tag">${rec.level}</span></h3>
                 <div class="scale-bar"><div class="scale-fill" style="width:${perc}%; background:${color};"></div></div>
                 <div><strong>📈 Faiz şkalası:</strong> ${perc.toFixed(1)}% (0% aşağı, 100% yüksək çətinlik)</div>
                 <div><i class="fas fa-microscope"></i> <strong>Mümkün elmi izah:</strong> ${scientific[d]}</div>
                 <p><strong>💡 CBT tövsiyəsi:</strong> ${intervention[d]}</p>
-                <p><em>Qeyd: Normativləri üzrə kəsilmə balları klinik mühakimə ilə birlikdə qiymətləndirilməlidir.</em></p>
+                <div class="psychologist-box"><i class="fas fa-user-md"></i> <strong>Psixoloq üçün tövsiyə:</strong> ${rec.psychologist}</div>
+                <div class="parent-box"><i class="fas fa-home"></i> <strong>Valideyn üçün tövsiyə:</strong> ${rec.parent}</div>
+                <p><em>Qeyd: ümumdünya normativləri üzrə kəsilmə balları klinik mühakimə ilə birlikdə qiymətləndirilməlidir.</em></p>
             </div>`;
         }
         let avgTotal = (results.A.percent+results.E.percent+results.S.percent+results.B.percent+results.D.percent)/5;
-        html += `<div class="specialist-note"><i class="fas fa-user-md"></i> <strong>Psixoloqun rəyi (töhfə sahəsi):</strong> Ümumi çətinlik indeksi ${avgTotal.toFixed
+        let totalRec = getRecommendations(avgTotal);
+        html += `<div class="specialist-note"><i class="fas fa-user-md"></i> <strong>Ümumi klinik nəticə:</strong> Ümumi çətinlik indeksi ${avgTotal.toFixed(0)}% 
 
-(0)}% . ${avgTotal>60 ? "Mütləq strukturlaşdırılmış CBT proqramı və valideyn təlimi tövsiyə olunur." : (avgTotal>40 ? "Profilaktik CBT strategiyaları faydalı ola bilər." 
+(${totalRec.level})<br>
+        <div class="psychologist-box" style="margin-top:10px;"><i class="fas fa-briefcase"></i> <strong>Psixoloq üçün ümumi tövsiyə:</strong> ${totalRec.psychologist}
 
-: "Normativ diapazon, lakin klinik mühakimə vacibdir.")}<br><textarea rows="3" style="width:100%; margin-top:12px; border-radius:24px; padding:10px;" 
+</div>
+        <div class="parent-box" style="margin-top:10px;"><i class="fas fa-heart"></i> <strong>Valideyn üçün ümumi tövsiyə:</strong> ${totalRec.parent}</div>
+        <textarea id="psychologistComments" rows="3" style="width:100%; margin-top:15px; border-radius:24px; padding:10px;" placeholder="Psixoloqun əlavə 
 
-placeholder="Psixoloqun əlavə qeydləri..."></textarea></div>`;
+qeydləri..."></textarea></div>`;
         html += `<div style="margin-top:20px; text-align:center;"><button id="saveHtmlFull" class="btn-outline" style="background:#1f5e3a; color:white;"><i class="fas 
 
 fa-download"></i> Nəticəni HTML fayl kimi yadda saxla</button></div>`;
+        
         document.getElementById('resultsArea').innerHTML = html;
         document.getElementById('resultsArea').style.display = 'block';
+        
+        // Yadda saxla düyməsi üçün event listener (textarea-dakı rəy də daxil olacaq)
         document.getElementById('saveHtmlFull')?.addEventListener('click', () => {
             let name = document.getElementById('childName').value.trim() || 'uşaq';
             let surname = document.getElementById('childSurname').value.trim() || '';
             let content = document.getElementById('resultsArea').cloneNode(true);
+            // textarea-nın cari dəyərini mütləq əlavə et (cloneNode daşıyır)
             let style = document.createElement('style');
-            style.textContent = `body { font-family: 'Inter', sans-serif; padding: 40px; background: white; } .domain-card { margin-bottom: 20px; }`;
+            style.textContent = `body { font-family: 'Inter', sans-serif; padding: 40px; background: white; } .domain-card { margin-bottom: 20px; } .psychologist-box, 
+
+.parent-box { margin-bottom: 10px; }`;
+            let comments = document.getElementById('psychologistComments')?.value || '';
+            let commentsHtml = `<div style="margin-top:20px; padding:15px; background:#f0f9f4; border-radius:28px;"><strong>🧾 Psixoloqun rəyi:</strong><br>
+
+${comments.replace(/\n/g,'<br>')}</div>`;
             let doc = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>AN CBT Nəticə ${name} ${surname}</title><link href="https://fonts.googleapis.com/css2?
 
-family=Inter:wght@400;600;700&display=swap" rel="stylesheet">${style.outerHTML}</head><body><h2>AN Psixoloji Dəstək Mərkəzi</h2><p><strong>Uşaq:</strong> ${name} 
+family=Inter:wght@400;600;700&display=swap" rel="stylesheet">${style.outerHTML}</head><body><h2>AN Psixoloji Dəstək və Reabilitasiya 
 
-${surname} | <strong>Yaş:</strong> ${document.getElementById('childAge').value} | <strong>Psixoloq:</strong> ${document.getElementById('specialist').value} | ${new 
+Mərkəzi</h2><p><strong>Uşaq:</strong> ${name} ${surname} | <strong>Yaş:</strong> ${document.getElementById('childAge').value} | <strong>Psixoloq:</strong> 
 
-Date().toLocaleString()}</p>${content.innerHTML}</body></html>`;
+${document.getElementById('specialist').value} | ${new Date().toLocaleString()}</p>${content.innerHTML}${commentsHtml}</body></html>`;
             let blob = new Blob([doc], {type: 'text/html'});
             let a = document.createElement('a');
             a.href = URL.createObjectURL(blob);
