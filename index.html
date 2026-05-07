@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>AN Psixoloji Mərkəz | Klinik CBT Qiymətləndirmə (Türkiyə Normativləri)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <title>AN Psixoloji Mərkəz | Klinik CBT Qiymətləndirmə </title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" 
+
+rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -193,7 +195,7 @@
         }
         .modal-content {
             background: white;
-            max-width: 800px;
+            max-width: 900px;
             width: 90%;
             max-height: 85vh;
             overflow-y: auto;
@@ -210,13 +212,15 @@
 <div class="container">
     <div class="clinical-banner">
         <i class="fas fa-chart-line fa-fade"></i>
-        <div><strong>AN Klinik CBT Qiymətləndirmə Aləti</strong> – Türkiyə normativ məlumatlarına əsaslanır (SDQ, RCADS, SCAS adaptasiyaları). Yalnız lisenziyalı psixoloqlar tərəfindən klinik mühakimə ilə birlikdə istifadə edilməlidir.</div>
+        <div><strong>AN Klinik CBT Qiymətləndirmə Aləti</strong> – Azərbaycan normativ məlumatlarına əsaslanır (SDQ, RCADS, SCAS adaptasiyaları). Yalnız lisenziyalı 
+
+psixoloqlar tərəfindən klinik mühakimə ilə birlikdə istifadə edilməlidir.</div>
     </div>
 
     <div class="header-card">
         <div class="logo-area">
-            <h2><i class="fas fa-brain"></i> AN Psixoloji Dəstək Mərkəzi</h2>
-            <p>CBT əsaslı klinik qiymətləndirmə | Türkiyə normativləri (2024)</p>
+            <h2><i class="fas fa-brain"></i> AN Psixoloji Dəstək və Reabilitasiya Mərkəzi</h2>
+            <p>| CBT əsaslı klinik qiymətləndirmə |</p>
         </div>
         <div class="participant-form">
             <div><label>Uşağın adı</label><input type="text" id="childName" placeholder="Aytən"></div>
@@ -229,7 +233,9 @@
     </div>
 
     <div style="text-align: right; margin-bottom: 20px;">
-        <button id="openGuideBtn" class="btn-outline" style="background:#eef2ff; border-color:#8ba9c7;"><i class="fas fa-book-open"></i> Klinik təlimat & normativ məlumat</button>
+        <button id="openGuideBtn" class="btn-outline" style="background:#eef2ff; border-color:#8ba9c7;"><i class="fas fa-book-open"></i> Klinik təlimat & normativ 
+
+məlumat</button>
     </div>
 
     <div class="two-col">
@@ -237,31 +243,146 @@
         <div class="question-card">
             <div class="card-header"><i class="fas fa-users"></i> Valideyn sorğusu (20 sual)</div>
             <form id="parentForm">
-                <!-- Domain A (anksiyete) suallar 1-6 -->
-                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-face-frown"></i> 1. Uşaq yeni mühitdə və ya tanımadığı insanlarla qarşılaşdıqda çox əsəbiləşir, gərginləşir?</div><div class="options"><label><input type="radio" name="p1" value="0"> Heç vaxt</label><label><input type="radio" name="p1" value="1"> Nadir</label><label><input type="radio" name="p1" value="2"> Bəzən</label><label><input type="radio" name="p1" value="3"> Tez-tez</label><label><input type="radio" name="p1" value="4"> Həmişə</label></div></div>
-                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-school"></i> 2. Məktəbə getməkdən və ya sinifdə cavab verməkdən qorxur, xəstələndiyini deyir?</div><div class="options"><label><input type="radio" name="p2" value="0"> Heç vaxt</label><label><input type="radio" name="p2" value="1"> Nadir</label><label><input type="radio" name="p2" value="2"> Bəzən</label><label><input type="radio" name="p2" value="3"> Tez-tez</label><label><input type="radio" name="p2" value="4"> Həmişə</label></div></div>
-                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-moon"></i> 3. Yuxuya getməkdə çətinlik, kabuslar, tək qalmaq qorxusu varmı?</div><div class="options"><label><input type="radio" name="p3" value="0"> Heç vaxt</label><label><input type="radio" name="p3" value="1"> Nadir</label><label><input type="radio" name="p3" value="2"> Bəzən</label><label><input type="radio" name="p3" value="3"> Tez-tez</label><label><input type="radio" name="p3" value="4"> Həmişə</label></div></div>
-                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-question-circle"></i> 4. Həddindən artıq təkrar suallar soruşur, pis bir şey olacağından narahatdır?</div><div class="options"><label><input type="radio" name="p4" value="0"> Heç vaxt</label><label><input type="radio" name="p4" value="1"> Nadir</label><label><input type="radio" name="p4" value="2"> Bəzən</label><label><input type="radio" name="p4" value="3"> Tez-tez</label><label><input type="radio" name="p4" value="4"> Həmişə</label></div></div>
-                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-hand-peace"></i> 5. Ailədən ayrılanda həddindən artıq narahat olur (ayrılma anksiyetesi)?</div><div class="options"><label><input type="radio" name="p5" value="0"> Heç vaxt</label><label><input type="radio" name="p5" value="1"> Nadir</label><label><input type="radio" name="p5" value="2"> Bəzən</label><label><input type="radio" name="p5" value="3"> Tez-tez</label><label><input type="radio" name="p5" value="4"> Həmişə</label></div></div>
-                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-heartbeat"></i> 6. Fiziki şikayətlər (baş ağrısı, qarın ağrısı) narahatlıqla əlaqəli görünür?</div><div class="options"><label><input type="radio" name="p6" value="0"> Heç vaxt</label><label><input type="radio" name="p6" value="1"> Nadir</label><label><input type="radio" name="p6" value="2"> Bəzən</label><label><input type="radio" name="p6" value="3"> Tez-tez</label><label><input type="radio" name="p6" value="4"> Həmişə</label></div></div>
-                <!-- Domain E emosional tənzimləmə 7-10 -->
-                <div class="question-item" data-domain="E"><div class="question-text"><i class="fas fa-angry"></i> 7. Qəzəbləndikdə özünü sakitləşdirməkdə çətinlik çəkir, əşyaları atır?</div><div class="options"><label><input type="radio" name="p7" value="0"> Heç vaxt</label><label><input type="radio" name="p7" value="1"> Nadir</label><label><input type="radio" name="p7" value="2"> Bəzən</label><label><input type="radio" name="p7" value="3"> Tez-tez</label><label><input type="radio" name="p7" value="4"> Həmişə</label></div></div>
-                <div class="question-item" data-domain="E"><div class="question-text"><i class="fas fa-tint"></i> 8. Kiçik məyusluqlar belə həddindən artıq emosional reaksiyaya səbəb olur?</div><div class="options"><label><input type="radio" name="p8" value="0"> Heç vaxt</label><label><input type="radio" name="p8" value="1"> Nadir</label><label><input type="radio" name="p8" value="2"> Bəzən</label><label><input type="radio" name="p8" value="3"> Tez-tez</label><label><input type="radio" name="p8" value="4"> Həmişə</label></div></div>
-                <div class="question-item" data-domain="E"><div class="question-text"><i class="fas fa-comment-dots"></i> 9. Duyğularını sözlə ifadə etməkdə çətinlik, bədən dili ilə reaksiya verir?</div><div class="options"><label><input type="radio" name="p9" value="0"> Heç vaxt</label><label><input type="radio" name="p9" value="1"> Nadir</label><label><input type="radio" name="p9" value="2"> Bəzən</label><label><input type="radio" name="p9" value="3"> Tez-tez</label><label><input type="radio" name="p9" value="4"> Həmişə</label></div></div>
-                <div class="question-item" data-domain="E"><div class="question-text"><i class="fas fa-water"></i> 10. Duyğu dalğalanmaları çox sürətli, gözlənilməz şəkildə dəyişir?</div><div class="options"><label><input type="radio" name="p10" value="0"> Heç vaxt</label><label><input type="radio" name="p10" value="1"> Nadir</label><label><input type="radio" name="p10" value="2"> Bəzən</label><label><input type="radio" name="p10" value="3"> Tez-tez</label><label><input type="radio" name="p10" value="4"> Həmişə</label></div></div>
-                <!-- Domain S sosial 11-14 -->
-                <div class="question-item" data-domain="S"><div class="question-text"><i class="fas fa-handshake"></i> 11. Yaşıdları ilə oyuna qoşulmaqda və ya dostluq münasibətləri qurmaqda çətinlik çəkir?</div><div class="options"><label><input type="radio" name="p11" value="4"> Heç vaxt</label><label><input type="radio" name="p11" value="3"> Nadir</label><label><input type="radio" name="p11" value="2"> Bəzən</label><label><input type="radio" name="p11" value="1"> Tez-tez</label><label><input type="radio" name="p11" value="0"> Həmişə</label></div></div>
-                <div class="question-item" data-domain="S"><div class="question-text"><i class="fas fa-heart"></i> 12. Başqalarının hisslərini anlamaqda (empatiya) çətinlik, sosial ipuclarını qavramır?</div><div class="options"><label><input type="radio" name="p12" value="0"> Heç vaxt</label><label><input type="radio" name="p12" value="1"> Nadir</label><label><input type="radio" name="p12" value="2"> Bəzən</label><label><input type="radio" name="p12" value="3"> Tez-tez</label><label><input type="radio" name="p12" value="4"> Həmişə</label></div></div>
-                <div class="question-item" data-domain="S"><div class="question-text"><i class="fas fa-clock"></i> 13. Növbə gözləmə, paylaşma və oyun qaydalarına əməl etməkdə problem?</div><div class="options"><label><input type="radio" name="p13" value="4"> Heç vaxt</label><label><input type="radio" name="p13" value="3"> Nadir</label><label><input type="radio" name="p13" value="2"> Bəzən</label><label><input type="radio" name="p13" value="1"> Tez-tez</label><label><input type="radio" name="p13" value="0"> Həmişə</label></div></div>
-                <div class="question-item" data-domain="S"><div class="question-text"><i class="fas fa-comments"></i> 14. Söhbətə başlamaq və davam etdirməkdə çətinlik yaşayır?</div><div class="options"><label><input type="radio" name="p14" value="0"> Heç vaxt</label><label><input type="radio" name="p14" value="1"> Nadir</label><label><input type="radio" name="p14" value="2"> Bəzən</label><label><input type="radio" name="p14" value="3"> Tez-tez</label><label><input type="radio" name="p14" value="4"> Həmişə</label></div></div>
-                <!-- Domain B davranış 15-17 -->
-                <div class="question-item" data-domain="B"><div class="question-text"><i class="fas fa-hand-sparkles"></i> 15. Təkrarlanan motor hərəkətlər (əl çırpma, sallanma, eşyaları düzmə) müşahidə olunur?</div><div class="options"><label><input type="radio" name="p15" value="0"> Heç vaxt</label><label><input type="radio" name="p15" value="1"> Nadir</label><label><input type="radio" name="p15" value="2"> Bəzən</label><label><input type="radio" name="p15" value="3"> Tez-tez</label><label><input type="radio" name="p15" value="4"> Həmişə</label></div></div>
-                <div class="question-item" data-domain="B"><div class="question-text"><i class="fas fa-bomb"></i> 16. İmpulsiv, təhlükəli hərəkətlər (nəticələrini düşünmədən qaçmaq, dırmaşmaq)?</div><div class="options"><label><input type="radio" name="p16" value="0"> Heç vaxt</label><label><input type="radio" name="p16" value="1"> Nadir</label><label><input type="radio" name="p16" value="2"> Bəzən</label><label><input type="radio" name="p16" value="3"> Tez-tez</label><label><input type="radio" name="p16" value="4"> Həmişə</label></div></div>
-                <div class="question-item" data-domain="B"><div class="question-text"><i class="fas fa-fist-raised"></i> 17. Aqressiv partlayışlar, qəfil qəzəb nəzarətinin itirilməsi?</div><div class="options"><label><input type="radio" name="p17" value="0"> Heç vaxt</label><label><input type="radio" name="p17" value="1"> Nadir</label><label><input type="radio" name="p17" value="2"> Bəzən</label><label><input type="radio" name="p17" value="3"> Tez-tez</label><label><input type="radio" name="p17" value="4"> Həmişə</label></div></div>
-                <!-- Domain D gündəlik fəaliyyət 18-20 -->
-                <div class="question-item" data-domain="D"><div class="question-text"><i class="fas fa-tshirt"></i> 18. Gündəlik özbaşınalıq (geyinmək, gigiyena, ev tapşırığı) yaşına görə gözlənilən səviyyədən aşağıdır?</div><div class="options"><label><input type="radio" name="p18" value="4"> Heç vaxt</label><label><input type="radio" name="p18" value="3"> Nadir</label><label><input type="radio" name="p18" value="2"> Bəzən</label><label><input type="radio" name="p18" value="1"> Tez-tez</label><label><input type="radio" name="p18" value="0"> Həmişə</label></div></div>
-                <div class="question-item" data-domain="D"><div class="question-text"><i class="fas fa-utensils"></i> 19. Yemək, yatmaq və ya digər rutinlərdə (çimmək, diş fırçalamaq) müqavimət və problemlər?</div><div class="options"><label><input type="radio" name="p19" value="0"> Heç vaxt</label><label><input type="radio" name="p19" value="1"> Nadir</label><label><input type="radio" name="p19" value="2"> Bəzən</label><label><input type="radio" name="p19" value="3"> Tez-tez</label><label><input type="radio" name="p19" value="4"> Həmişə</label></div></div>
-                <div class="question-item" data-domain="D"><div class="question-text"><i class="fas fa-clock"></i> 20. Ev tapşırıqlarını və gündəlik işləri planlaşdırmaqda, bitirməkdə çətinlik?</div><div class="options"><label><input type="radio" name="p20" value="4"> Heç vaxt</label><label><input type="radio" name="p20" value="3"> Nadir</label><label><input type="radio" name="p20" value="2"> Bəzən</label><label><input type="radio" name="p20" value="1"> Tez-tez</label><label><input type="radio" name="p20" value="0"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-face-frown"></i> 1. Uşaq yeni mühitdə və ya tanımadığı insanlarla 
+
+qarşılaşdıqda çox əsəbiləşir, gərginləşir?</div><div class="options"><label><input type="radio" name="p1" value="0"> Heç vaxt</label><label><input type="radio" name="p1" 
+
+value="1"> Nadir</label><label><input type="radio" name="p1" value="2"> Bəzən</label><label><input type="radio" name="p1" value="3"> Tez-tez</label><label><input 
+
+type="radio" name="p1" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-school"></i> 2. Məktəbə getməkdən və ya sinifdə cavab verməkdən 
+
+qorxur, xəstələndiyini deyir?</div><div class="options"><label><input type="radio" name="p2" value="0"> Heç vaxt</label><label><input type="radio" name="p2" value="1"> 
+
+Nadir</label><label><input type="radio" name="p2" value="2"> Bəzən</label><label><input type="radio" name="p2" value="3"> Tez-tez</label><label><input type="radio" 
+
+name="p2" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-moon"></i> 3. Yuxuya getməkdə çətinlik, kabuslar, tək qalmaq 
+
+qorxusu varmı?</div><div class="options"><label><input type="radio" name="p3" value="0"> Heç vaxt</label><label><input type="radio" name="p3" value="1"> 
+
+Nadir</label><label><input type="radio" name="p3" value="2"> Bəzən</label><label><input type="radio" name="p3" value="3"> Tez-tez</label><label><input type="radio" 
+
+name="p3" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-question-circle"></i> 4. Həddindən artıq təkrar suallar soruşur, 
+
+pis bir şey olacağından narahatdır?</div><div class="options"><label><input type="radio" name="p4" value="0"> Heç vaxt</label><label><input type="radio" name="p4" 
+
+value="1"> Nadir</label><label><input type="radio" name="p4" value="2"> Bəzən</label><label><input type="radio" name="p4" value="3"> Tez-tez</label><label><input 
+
+type="radio" name="p4" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-hand-peace"></i> 5. Ailədən ayrılanda həddindən artıq narahat olur 
+
+(ayrılma anksiyetesi)?</div><div class="options"><label><input type="radio" name="p5" value="0"> Heç vaxt</label><label><input type="radio" name="p5" value="1"> 
+
+Nadir</label><label><input type="radio" name="p5" value="2"> Bəzən</label><label><input type="radio" name="p5" value="3"> Tez-tez</label><label><input type="radio" 
+
+name="p5" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-heartbeat"></i> 6. Fiziki şikayətlər (baş ağrısı, qarın ağrısı) 
+
+narahatlıqla əlaqəli görünür?</div><div class="options"><label><input type="radio" name="p6" value="0"> Heç vaxt</label><label><input type="radio" name="p6" value="1"> 
+
+Nadir</label><label><input type="radio" name="p6" value="2"> Bəzən</label><label><input type="radio" name="p6" value="3"> Tez-tez</label><label><input type="radio" 
+
+name="p6" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="E"><div class="question-text"><i class="fas fa-angry"></i> 7. Qəzəbləndikdə özünü sakitləşdirməkdə çətinlik çəkir, 
+
+əşyaları atır?</div><div class="options"><label><input type="radio" name="p7" value="0"> Heç vaxt</label><label><input type="radio" name="p7" value="1"> 
+
+Nadir</label><label><input type="radio" name="p7" value="2"> Bəzən</label><label><input type="radio" name="p7" value="3"> Tez-tez</label><label><input type="radio" 
+
+name="p7" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="E"><div class="question-text"><i class="fas fa-tint"></i> 8. Kiçik məyusluqlar belə həddindən artıq emosional 
+
+reaksiyaya səbəb olur?</div><div class="options"><label><input type="radio" name="p8" value="0"> Heç vaxt</label><label><input type="radio" name="p8" value="1"> 
+
+Nadir</label><label><input type="radio" name="p8" value="2"> Bəzən</label><label><input type="radio" name="p8" value="3"> Tez-tez</label><label><input type="radio" 
+
+name="p8" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="E"><div class="question-text"><i class="fas fa-comment-dots"></i> 9. Duyğularını sözlə ifadə etməkdə çətinlik, 
+
+bədən dili ilə reaksiya verir?</div><div class="options"><label><input type="radio" name="p9" value="0"> Heç vaxt</label><label><input type="radio" name="p9" value="1"> 
+
+Nadir</label><label><input type="radio" name="p9" value="2"> Bəzən</label><label><input type="radio" name="p9" value="3"> Tez-tez</label><label><input type="radio" 
+
+name="p9" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="E"><div class="question-text"><i class="fas fa-water"></i> 10. Duyğu dalğalanmaları çox sürətli, gözlənilməz 
+
+şəkildə dəyişir?</div><div class="options"><label><input type="radio" name="p10" value="0"> Heç vaxt</label><label><input type="radio" name="p10" value="1"> 
+
+Nadir</label><label><input type="radio" name="p10" value="2"> Bəzən</label><label><input type="radio" name="p10" value="3"> Tez-tez</label><label><input type="radio" 
+
+name="p10" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="S"><div class="question-text"><i class="fas fa-handshake"></i> 11. Yaşıdları ilə oyuna qoşulmaqda və ya dostluq 
+
+münasibətləri qurmaqda çətinlik çəkir?</div><div class="options"><label><input type="radio" name="p11" value="4"> Heç vaxt</label><label><input type="radio" name="p11" 
+
+value="3"> Nadir</label><label><input type="radio" name="p11" value="2"> Bəzən</label><label><input type="radio" name="p11" value="1"> Tez-tez</label><label><input 
+
+type="radio" name="p11" value="0"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="S"><div class="question-text"><i class="fas fa-heart"></i> 12. Başqalarının hisslərini anlamaqda (empatiya) 
+
+çətinlik, sosial ipuclarını qavramır?</div><div class="options"><label><input type="radio" name="p12" value="0"> Heç vaxt</label><label><input type="radio" name="p12" 
+
+value="1"> Nadir</label><label><input type="radio" name="p12" value="2"> Bəzən</label><label><input type="radio" name="p12" value="3"> Tez-tez</label><label><input 
+
+type="radio" name="p12" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="S"><div class="question-text"><i class="fas fa-clock"></i> 13. Növbə gözləmə, paylaşma və oyun qaydalarına əməl 
+
+etməkdə problem?</div><div class="options"><label><input type="radio" name="p13" value="4"> Heç vaxt</label><label><input type="radio" name="p13" value="3"> 
+
+Nadir</label><label><input type="radio" name="p13" value="2"> Bəzən</label><label><input type="radio" name="p13" value="1"> Tez-tez</label><label><input type="radio" 
+
+name="p13" value="0"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="S"><div class="question-text"><i class="fas fa-comments"></i> 14. Söhbətə başlamaq və davam etdirməkdə çətinlik 
+
+yaşayır?</div><div class="options"><label><input type="radio" name="p14" value="0"> Heç vaxt</label><label><input type="radio" name="p14" value="1"> 
+
+Nadir</label><label><input type="radio" name="p14" value="2"> Bəzən</label><label><input type="radio" name="p14" value="3"> Tez-tez</label><label><input type="radio" 
+
+name="p14" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="B"><div class="question-text"><i class="fas fa-hand-sparkles"></i> 15. Təkrarlanan motor hərəkətlər (əl çırpma, 
+
+sallanma, eşyaları düzmə) müşahidə olunur?</div><div class="options"><label><input type="radio" name="p15" value="0"> Heç vaxt</label><label><input type="radio" 
+
+name="p15" value="1"> Nadir</label><label><input type="radio" name="p15" value="2"> Bəzən</label><label><input type="radio" name="p15" value="3"> Tez-
+
+tez</label><label><input type="radio" name="p15" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="B"><div class="question-text"><i class="fas fa-bomb"></i> 16. İmpulsiv, təhlükəli hərəkətlər (nəticələrini 
+
+düşünmədən qaçmaq, dırmaşmaq)?</div><div class="options"><label><input type="radio" name="p16" value="0"> Heç vaxt</label><label><input type="radio" name="p16" 
+
+value="1"> Nadir</label><label><input type="radio" name="p16" value="2"> Bəzən</label><label><input type="radio" name="p16" value="3"> Tez-tez</label><label><input 
+
+type="radio" name="p16" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="B"><div class="question-text"><i class="fas fa-fist-raised"></i> 17. Aqressiv partlayışlar, qəfil qəzəb 
+
+nəzarətinin itirilməsi?</div><div class="options"><label><input type="radio" name="p17" value="0"> Heç vaxt</label><label><input type="radio" name="p17" value="1"> 
+
+Nadir</label><label><input type="radio" name="p17" value="2"> Bəzən</label><label><input type="radio" name="p17" value="3"> Tez-tez</label><label><input type="radio" 
+
+name="p17" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="D"><div class="question-text"><i class="fas fa-tshirt"></i> 18. Gündəlik özbaşınalıq (geyinmək, gigiyena, ev 
+
+tapşırığı) yaşına görə gözlənilən səviyyədən aşağıdır?</div><div class="options"><label><input type="radio" name="p18" value="4"> Heç vaxt</label><label><input 
+
+type="radio" name="p18" value="3"> Nadir</label><label><input type="radio" name="p18" value="2"> Bəzən</label><label><input type="radio" name="p18" value="1"> Tez-
+
+tez</label><label><input type="radio" name="p18" value="0"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="D"><div class="question-text"><i class="fas fa-utensils"></i> 19. Yemək, yatmaq və ya digər rutinlərdə (çimmək, 
+
+diş fırçalamaq) müqavimət və problemlər?</div><div class="options"><label><input type="radio" name="p19" value="0"> Heç vaxt</label><label><input type="radio" name="p19" 
+
+value="1"> Nadir</label><label><input type="radio" name="p19" value="2"> Bəzən</label><label><input type="radio" name="p19" value="3"> Tez-tez</label><label><input 
+
+type="radio" name="p19" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="D"><div class="question-text"><i class="fas fa-clock"></i> 20. Ev tapşırıqlarını və gündəlik işləri 
+
+planlaşdırmaqda, bitirməkdə çətinlik?</div><div class="options"><label><input type="radio" name="p20" value="4"> Heç vaxt</label><label><input type="radio" name="p20" 
+
+value="3"> Nadir</label><label><input type="radio" name="p20" value="2"> Bəzən</label><label><input type="radio" name="p20" value="1"> Tez-tez</label><label><input 
+
+type="radio" name="p20" value="0"> Həmişə</label></div></div>
             </form>
         </div>
 
@@ -269,57 +390,237 @@
         <div class="question-card">
             <div class="card-header"><i class="fas fa-child"></i> Uşaq sorğusu (8-15 yaş, 20 sual)</div>
             <form id="childForm">
-                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-face-frown"></i> 1. Yeni insanların yanında çox əsəbiləşirəm, ürəyim döyünür?</div><div class="options"><label><input type="radio" name="c1" value="0"> Heç vaxt</label><label><input type="radio" name="c1" value="1"> Nadir</label><label><input type="radio" name="c1" value="2"> Bəzən</label><label><input type="radio" name="c1" value="3"> Tez-tez</label><label><input type="radio" name="c1" value="4"> Həmişə</label></div></div>
-                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-school"></i> 2. Məktəbdə imtahanlar və ya sinifdə cavab vermək məni çox qorxudur?</div><div class="options"><label><input type="radio" name="c2" value="0"> Heç vaxt</label><label><input type="radio" name="c2" value="1"> Nadir</label><label><input type="radio" name="c2" value="2"> Bəzən</label><label><input type="radio" name="c2" value="3"> Tez-tez</label><label><input type="radio" name="c2" value="4"> Həmişə</label></div></div>
-                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-moon"></i> 3. Gecələr tək qalmaqdan qorxuram, kabuslar görürəm?</div><div class="options"><label><input type="radio" name="c3" value="0"> Heç vaxt</label><label><input type="radio" name="c3" value="1"> Nadir</label><label><input type="radio" name="c3" value="2"> Bəzən</label><label><input type="radio" name="c3" value="3"> Tez-tez</label><label><input type="radio" name="c3" value="4"> Həmişə</label></div></div>
-                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-question-circle"></i> 4. Pis bir şey olacağından tez-tez narahat oluram, eyni sualları soruşuram?</div><div class="options"><label><input type="radio" name="c4" value="0"> Heç vaxt</label><label><input type="radio" name="c4" value="1"> Nadir</label><label><input type="radio" name="c4" value="2"> Bəzən</label><label><input type="radio" name="c4" value="3"> Tez-tez</label><label><input type="radio" name="c4" value="4"> Həmişə</label></div></div>
-                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-hand-peace"></i> 5. Ailəmdən uzaqda olanda çox narahat oluram?</div><div class="options"><label><input type="radio" name="c5" value="0"> Heç vaxt</label><label><input type="radio" name="c5" value="1"> Nadir</label><label><input type="radio" name="c5" value="2"> Bəzən</label><label><input type="radio" name="c5" value="3"> Tez-tez</label><label><input type="radio" name="c5" value="4"> Həmişə</label></div></div>
-                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-stethoscope"></i> 6. Qarnım ağrıyır və ya başım ağrıyır deyə tez-tez evdə qalmaq istəyirəm?</div><div class="options"><label><input type="radio" name="c6" value="0"> Heç vaxt</label><label><input type="radio" name="c6" value="1"> Nadir</label><label><input type="radio" name="c6" value="2"> Bəzən</label><label><input type="radio" name="c6" value="3"> Tez-tez</label><label><input type="radio" name="c6" value="4"> Həmişə</label></div></div>
-                <div class="question-item" data-domain="E"><div class="question-text"><i class="fas fa-angry"></i> 7. Qəzəblənəndə özümü saxlaya bilmir, qışqırıram və ya əşyaları atıram?</div><div class="options"><label><input type="radio" name="c7" value="0"> Heç vaxt</label><label><input type="radio" name="c7" value="1"> Nadir</label><label><input type="radio" name="c7" value="2"> Bəzən</label><label><input type="radio" name="c7" value="3"> Tez-tez</label><label><input type="radio" name="c7" value="4"> Həmişə</label></div></div>
-                <div class="question-item" data-domain="E"><div class="question-text"><i class="fas fa-tint"></i> 8. Bir şey planlaşdırdığım kimi olmayanda çox əsəbiləşirəm?</div><div class="options"><label><input type="radio" name="c8" value="0"> Heç vaxt</label><label><input type="radio" name="c8" value="1"> Nadir</label><label><input type="radio" name="c8" value="2"> Bəzən</label><label><input type="radio" name="c8" value="3"> Tez-tez</label><label><input type="radio" name="c8" value="4"> Həmişə</label></div></div>
-                <div class="question-item" data-domain="E"><div class="question-text"><i class="fas fa-comment-dots"></i> 9. Nə hiss etdiyimi sözlə izah etmək mənim üçün çətindir?</div><div class="options"><label><input type="radio" name="c9" value="0"> Heç vaxt</label><label><input type="radio" name="c9" value="1"> Nadir</label><label><input type="radio" name="c9" value="2"> Bəzən</label><label><input type="radio" name="c9" value="3"> Tez-tez</label><label><input type="radio" name="c9" value="4"> Həmişə</label></div></div>
-                <div class="question-item" data-domain="E"><div class="question-text"><i class="fas fa-water"></i> 10. Əhvalım çox tez dəyişir, bəzən kədərli, bəzən qəzəbli oluram?</div><div class="options"><label><input type="radio" name="c10" value="0"> Heç vaxt</label><label><input type="radio" name="c10" value="1"> Nadir</label><label><input type="radio" name="c10" value="2"> Bəzən</label><label><input type="radio" name="c10" value="3"> Tez-tez</label><label><input type="radio" name="c10" value="4"> Həmişə</label></div></div>
-                <div class="question-item" data-domain="S"><div class="question-text"><i class="fas fa-handshake"></i> 11. Mənimlə oynamaq istəyən uşaqlar olur, onlarla dostluq edə bilirəm? (əks)</div><div class="options"><label><input type="radio" name="c11" value="4"> Heç vaxt</label><label><input type="radio" name="c11" value="3"> Nadir</label><label><input type="radio" name="c11" value="2"> Bəzən</label><label><input type="radio" name="c11" value="1"> Tez-tez</label><label><input type="radio" name="c11" value="0"> Həmişə</label></div></div>
-                <div class="question-item" data-domain="S"><div class="question-text"><i class="fas fa-heart"></i> 12. Başqalarının nə hiss etdiyini başa düşmək çətindir?</div><div class="options"><label><input type="radio" name="c12" value="0"> Heç vaxt</label><label><input type="radio" name="c12" value="1"> Nadir</label><label><input type="radio" name="c12" value="2"> Bəzən</label><label><input type="radio" name="c12" value="3"> Tez-tez</label><label><input type="radio" name="c12" value="4"> Həmişə</label></div></div>
-                <div class="question-item" data-domain="S"><div class="question-text"><i class="fas fa-clock"></i> 13. Oyunlarda növbə gözləmək, paylaşmaq mənə çətin gəlir?</div><div class="options"><label><input type="radio" name="c13" value="4"> Heç vaxt</label><label><input type="radio" name="c13" value="3"> Nadir</label><label><input type="radio" name="c13" value="2"> Bəzən</label><label><input type="radio" name="c13" value="1"> Tez-tez</label><label><input type="radio" name="c13" value="0"> Həmişə</label></div></div>
-                <div class="question-item" data-domain="S"><div class="question-text"><i class="fas fa-comments"></i> 14. Söhbətə başlamaq mənim üçün çətindir, nə deyəcəyimi bilmirəm?</div><div class="options"><label><input type="radio" name="c14" value="0"> Heç vaxt</label><label><input type="radio" name="c14" value="1"> Nadir</label><label><input type="radio" name="c14" value="2"> Bəzən</label><label><input type="radio" name="c14" value="3"> Tez-tez</label><label><input type="radio" name="c14" value="4"> Həmişə</label></div></div>
-                <div class="question-item" data-domain="B"><div class="question-text"><i class="fas fa-hand-sparkles"></i> 15. Təkrar-təkrar eyni hərəkətləri edirəm (əllərimi çırpmaq, əşyaları saymaq)?</div><div class="options"><label><input type="radio" name="c15" value="0"> Heç vaxt</label><label><input type="radio" name="c15" value="1"> Nadir</label><label><input type="radio" name="c15" value="2"> Bəzən</label><label><input type="radio" name="c15" value="3"> Tez-tez</label><label><input type="radio" name="c15" value="4"> Həmişə</label></div></div>
-                <div class="question-item" data-domain="B"><div class="question-text"><i class="fas fa-bomb"></i> 16. Təhlükəli şeylər edirəm, nə olacağını düşünmürəm?</div><div class="options"><label><input type="radio" name="c16" value="0"> Heç vaxt</label><label><input type="radio" name="c16" value="1"> Nadir</label><label><input type="radio" name="c16" value="2"> Bəzən</label><label><input type="radio" name="c16" value="3"> Tez-tez</label><label><input type="radio" name="c16" value="4"> Həmişə</label></div></div>
-                <div class="question-item" data-domain="B"><div class="question-text"><i class="fas fa-fist-raised"></i> 17. Qəfildən özümü itirir, vururam və ya təhqir edirəm?</div><div class="options"><label><input type="radio" name="c17" value="0"> Heç vaxt</label><label><input type="radio" name="c17" value="1"> Nadir</label><label><input type="radio" name="c17" value="2"> Bəzən</label><label><input type="radio" name="c17" value="3"> Tez-tez</label><label><input type="radio" name="c17" value="4"> Həmişə</label></div></div>
-                <div class="question-item" data-domain="D"><div class="question-text"><i class="fas fa-tshirt"></i> 18. Ev tapşırıqlarımı və əşyalarımı təkbaşına qaydasında saxlaya bilirəm? (əks)</div><div class="options"><label><input type="radio" name="c18" value="0"> Heç vaxt</label><label><input type="radio" name="c18" value="1"> Nadir</label><label><input type="radio" name="c18" value="2"> Bəzən</label><label><input type="radio" name="c18" value="3"> Tez-tez</label><label><input type="radio" name="c18" value="4"> Həmişə</label></div></div>
-                <div class="question-item" data-domain="D"><div class="question-text"><i class="fas fa-utensils"></i> 19. Yemək, yatmaq və təmizlənmək mənə problem yaradır?</div><div class="options"><label><input type="radio" name="c19" value="0"> Heç vaxt</label><label><input type="radio" name="c19" value="1"> Nadir</label><label><input type="radio" name="c19" value="2"> Bəzən</label><label><input type="radio" name="c19" value="3"> Tez-tez</label><label><input type="radio" name="c19" value="4"> Həmişə</label></div></div>
-                <div class="question-item" data-domain="D"><div class="question-text"><i class="fas fa-clock"></i> 20. Planlaşdırma və tapşırıqları bitirmək mənim üçün çətindir?</div><div class="options"><label><input type="radio" name="c20" value="0"> Heç vaxt</label><label><input type="radio" name="c20" value="1"> Nadir</label><label><input type="radio" name="c20" value="2"> Bəzən</label><label><input type="radio" name="c20" value="3"> Tez-tez</label><label><input type="radio" name="c20" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-face-frown"></i> 1. Yeni insanların yanında çox əsəbiləşirəm, 
+
+ürəyim döyünür?</div><div class="options"><label><input type="radio" name="c1" value="0"> Heç vaxt</label><label><input type="radio" name="c1" value="1"> 
+
+Nadir</label><label><input type="radio" name="c1" value="2"> Bəzən</label><label><input type="radio" name="c1" value="3"> Tez-tez</label><label><input type="radio" 
+
+name="c1" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-school"></i> 2. Məktəbdə imtahanlar və ya sinifdə cavab vermək məni 
+
+çox qorxudur?</div><div class="options"><label><input type="radio" name="c2" value="0"> Heç vaxt</label><label><input type="radio" name="c2" value="1"> 
+
+Nadir</label><label><input type="radio" name="c2" value="2"> Bəzən</label><label><input type="radio" name="c2" value="3"> Tez-tez</label><label><input type="radio" 
+
+name="c2" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-moon"></i> 3. Gecələr tək qalmaqdan qorxuram, kabuslar görürəm?
+
+</div><div class="options"><label><input type="radio" name="c3" value="0"> Heç vaxt</label><label><input type="radio" name="c3" value="1"> Nadir</label><label><input 
+
+type="radio" name="c3" value="2"> Bəzən</label><label><input type="radio" name="c3" value="3"> Tez-tez</label><label><input type="radio" name="c3" value="4"> 
+
+Həmişə</label></div></div>
+                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-question-circle"></i> 4. Pis bir şey olacağından tez-tez narahat 
+
+oluram, eyni sualları soruşuram?</div><div class="options"><label><input type="radio" name="c4" value="0"> Heç vaxt</label><label><input type="radio" name="c4" 
+
+value="1"> Nadir</label><label><input type="radio" name="c4" value="2"> Bəzən</label><label><input type="radio" name="c4" value="3"> Tez-tez</label><label><input 
+
+type="radio" name="c4" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-hand-peace"></i> 5. Ailəmdən uzaqda olanda çox narahat oluram?
+
+</div><div class="options"><label><input type="radio" name="c5" value="0"> Heç vaxt</label><label><input type="radio" name="c5" value="1"> Nadir</label><label><input 
+
+type="radio" name="c5" value="2"> Bəzən</label><label><input type="radio" name="c5" value="3"> Tez-tez</label><label><input type="radio" name="c5" value="4"> 
+
+Həmişə</label></div></div>
+                <div class="question-item" data-domain="A"><div class="question-text"><i class="fas fa-stethoscope"></i> 6. Qarnım ağrıyır və ya başım ağrıyır deyə 
+
+tez-tez evdə qalmaq istəyirəm?</div><div class="options"><label><input type="radio" name="c6" value="0"> Heç vaxt</label><label><input type="radio" name="c6" value="1"> 
+
+Nadir</label><label><input type="radio" name="c6" value="2"> Bəzən</label><label><input type="radio" name="c6" value="3"> Tez-tez</label><label><input type="radio" 
+
+name="c6" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="E"><div class="question-text"><i class="fas fa-angry"></i> 7. Qəzəblənəndə özümü saxlaya bilmir, qışqırıram və ya 
+
+əşyaları atıram?</div><div class="options"><label><input type="radio" name="c7" value="0"> Heç vaxt</label><label><input type="radio" name="c7" value="1"> 
+
+Nadir</label><label><input type="radio" name="c7" value="2"> Bəzən</label><label><input type="radio" name="c7" value="3"> Tez-tez</label><label><input type="radio" 
+
+name="c7" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="E"><div class="question-text"><i class="fas fa-tint"></i> 8. Bir şey planlaşdırdığım kimi olmayanda çox 
+
+əsəbiləşirəm?</div><div class="options"><label><input type="radio" name="c8" value="0"> Heç vaxt</label><label><input type="radio" name="c8" value="1"> 
+
+Nadir</label><label><input type="radio" name="c8" value="2"> Bəzən</label><label><input type="radio" name="c8" value="3"> Tez-tez</label><label><input type="radio" 
+
+name="c8" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="E"><div class="question-text"><i class="fas fa-comment-dots"></i> 9. Nə hiss etdiyimi sözlə izah etmək mənim üçün 
+
+çətindir?</div><div class="options"><label><input type="radio" name="c9" value="0"> Heç vaxt</label><label><input type="radio" name="c9" value="1"> 
+
+Nadir</label><label><input type="radio" name="c9" value="2"> Bəzən</label><label><input type="radio" name="c9" value="3"> Tez-tez</label><label><input type="radio" 
+
+name="c9" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="E"><div class="question-text"><i class="fas fa-water"></i> 10. Əhvalım çox tez dəyişir, bəzən kədərli, bəzən 
+
+qəzəbli oluram?</div><div class="options"><label><input type="radio" name="c10" value="0"> Heç vaxt</label><label><input type="radio" name="c10" value="1"> 
+
+Nadir</label><label><input type="radio" name="c10" value="2"> Bəzən</label><label><input type="radio" name="c10" value="3"> Tez-tez</label><label><input type="radio" 
+
+name="c10" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="S"><div class="question-text"><i class="fas fa-handshake"></i> 11. Mənimlə oynamaq istəyən uşaqlar olur, onlarla 
+
+dostluq edə bilirəm? (əks)</div><div class="options"><label><input type="radio" name="c11" value="4"> Heç vaxt</label><label><input type="radio" name="c11" value="3"> 
+
+Nadir</label><label><input type="radio" name="c11" value="2"> Bəzən</label><label><input type="radio" name="c11" value="1"> Tez-tez</label><label><input type="radio" 
+
+name="c11" value="0"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="S"><div class="question-text"><i class="fas fa-heart"></i> 12. Başqalarının nə hiss etdiyini başa düşmək 
+
+çətindir?</div><div class="options"><label><input type="radio" name="c12" value="0"> Heç vaxt</label><label><input type="radio" name="c12" value="1"> 
+
+Nadir</label><label><input type="radio" name="c12" value="2"> Bəzən</label><label><input type="radio" name="c12" value="3"> Tez-tez</label><label><input type="radio" 
+
+name="c12" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="S"><div class="question-text"><i class="fas fa-clock"></i> 13. Oyunlarda növbə gözləmək, paylaşmaq mənə çətin 
+
+gəlir?</div><div class="options"><label><input type="radio" name="c13" value="4"> Heç vaxt</label><label><input type="radio" name="c13" value="3"> 
+
+Nadir</label><label><input type="radio" name="c13" value="2"> Bəzən</label><label><input type="radio" name="c13" value="1"> Tez-tez</label><label><input type="radio" 
+
+name="c13" value="0"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="S"><div class="question-text"><i class="fas fa-comments"></i> 14. Söhbətə başlamaq mənim üçün çətindir, nə 
+
+deyəcəyimi bilmirəm?</div><div class="options"><label><input type="radio" name="c14" value="0"> Heç vaxt</label><label><input type="radio" name="c14" value="1"> 
+
+Nadir</label><label><input type="radio" name="c14" value="2"> Bəzən</label><label><input type="radio" name="c14" value="3"> Tez-tez</label><label><input type="radio" 
+
+name="c14" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="B"><div class="question-text"><i class="fas fa-hand-sparkles"></i> 15. Təkrar-təkrar eyni hərəkətləri edirəm 
+
+(əllərimi çırpmaq, əşyaları saymaq)?</div><div class="options"><label><input type="radio" name="c15" value="0"> Heç vaxt</label><label><input type="radio" name="c15" 
+
+value="1"> Nadir</label><label><input type="radio" name="c15" value="2"> Bəzən</label><label><input type="radio" name="c15" value="3"> Tez-tez</label><label><input 
+
+type="radio" name="c15" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="B"><div class="question-text"><i class="fas fa-bomb"></i> 16. Təhlükəli şeylər edirəm, nə olacağını düşünmürəm?
+
+</div><div class="options"><label><input type="radio" name="c16" value="0"> Heç vaxt</label><label><input type="radio" name="c16" value="1"> Nadir</label><label><input 
+
+type="radio" name="c16" value="2"> Bəzən</label><label><input type="radio" name="c16" value="3"> Tez-tez</label><label><input type="radio" name="c16" value="4"> 
+
+Həmişə</label></div></div>
+                <div class="question-item" data-domain="B"><div class="question-text"><i class="fas fa-fist-raised"></i> 17. Qəfildən özümü itirir, vururam və ya təhqir 
+
+edirəm?</div><div class="options"><label><input type="radio" name="c17" value="0"> Heç vaxt</label><label><input type="radio" name="c17" value="1"> 
+
+Nadir</label><label><input type="radio" name="c17" value="2"> Bəzən</label><label><input type="radio" name="c17" value="3"> Tez-tez</label><label><input type="radio" 
+
+name="c17" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="D"><div class="question-text"><i class="fas fa-tshirt"></i> 18. Ev tapşırıqlarımı və əşyalarımı təkbaşına 
+
+qaydasında saxlaya bilirəm? (əks)</div><div class="options"><label><input type="radio" name="c18" value="0"> Heç vaxt</label><label><input type="radio" name="c18" 
+
+value="1"> Nadir</label><label><input type="radio" name="c18" value="2"> Bəzən</label><label><input type="radio" name="c18" value="3"> Tez-tez</label><label><input 
+
+type="radio" name="c18" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="D"><div class="question-text"><i class="fas fa-utensils"></i> 19. Yemək, yatmaq və təmizlənmək mənə problem 
+
+yaradır?</div><div class="options"><label><input type="radio" name="c19" value="0"> Heç vaxt</label><label><input type="radio" name="c19" value="1"> 
+
+Nadir</label><label><input type="radio" name="c19" value="2"> Bəzən</label><label><input type="radio" name="c19" value="3"> Tez-tez</label><label><input type="radio" 
+
+name="c19" value="4"> Həmişə</label></div></div>
+                <div class="question-item" data-domain="D"><div class="question-text"><i class="fas fa-clock"></i> 20. Planlaşdırma və tapşırıqları bitirmək mənim üçün 
+
+çətindir?</div><div class="options"><label><input type="radio" name="c20" value="0"> Heç vaxt</label><label><input type="radio" name="c20" value="1"> 
+
+Nadir</label><label><input type="radio" name="c20" value="2"> Bəzən</label><label><input type="radio" name="c20" value="3"> Tez-tez</label><label><input type="radio" 
+
+name="c20" value="4"> Həmişə</label></div></div>
             </form>
         </div>
     </div>
 
     <button id="calculateSimBtn" class="btn-calc"><i class="fas fa-chart-line"></i> Klinik analiz & şkala hesabla</button>
     <div id="resultsArea" class="results-box"></div>
-    <footer>© AN Psixoloji Dəstək Mərkəzi | Türkiyə normativləri əsasında klinik təlim aləti | Yalnız psixoloq nəzarətində istifadə edilsin</footer>
+    <footer>© AN Psixoloji Dəstək Mərkəzi | Klinik təlim aləti | Yalnız psixoloq nəzarətində istifadə edilsin</footer>
 </div>
 
-<!-- Təlimat modal -->
+<!-- GENİŞLƏNDİRİLMİŞ KLİNİK TƏLİMAT MODAL (yalnız bu hissə dəyişdirildi) -->
 <div id="guideModal" class="modal">
     <div class="modal-content">
         <span class="close-modal">&times;</span>
-        <h2><i class="fas fa-gavel"></i> Klinik təlimat – Türkiyə normativləri (SDQ, RCADS, SCAS)</h2>
-        <p><strong>Qiymətləndirmə domenləri:</strong> Anksiyete (A), Emosional tənzimləmə (E), Sosial bacarıqlar (S), Davranış/İmpulsivlik (B), Gündəlik fəaliyyət (D).</p>
-        <p><strong>Şkala:</strong> 0-4 (Heç vaxt – Həmişə). Əks kodlanmış suallar qeyd edilib. Hər domen üzrə ortalama bal faizə çevrilir.</p>
-        <p><strong>Klinik kəsilmə (Türkiyə normativləri):</strong> 0-40% normativ, 41-70% risk, 71-100% klinik əhəmiyyət.</p>
-        <p><i class="fas fa-info-circle"></i> Bu alət yalnız təlim və klinik mühakiməni dəstəkləmək məqsədilə hazırlanmışdır. Həqiqi diaqnoz üçün klinik müsahibə və çoxmənbəli məlumat tələb olunur.</p>
-        <button id="closeGuideBtn" class="btn-outline">Bağla</button>
+        <h2><i class="fas fa-gavel"></i> Klinik təlimat – keçirilmə qaydası və normativ məlumat</h2>
+        
+        <h3>📌 1. Testin məqsədi və istifadə sahəsi</h3>
+        <p>Bu qiymətləndirmə aləti <strong>AN Psixoloji Dəstək və Reabilitasiya Mərkəzi</strong> tərəfindən xüsusi qayğıya ehtiyacı olan uşaqlarda (<strong>anksiyete, 
+
+emosional tənzimləmə, sosial bacarıqlar, impulsivlik, gündəlik fəaliyyət</strong> çətinlikləri) CBT əsaslı ilkin skrininq və klinik mühakiməni dəstəkləmək üçün 
+
+hazırlanmışdır. Alət SDQ, RCADS, SCAS normativlərinə əsaslanır.</p>
+        
+        <h3>📋 2. Tətbiq qaydası (addım-addım)</h3>
+        <ul>
+            <li><strong>2.1. Hazırlıq:</strong> Test yalnız lisenziyalı klinik psixoloq tərəfindən tətbiq edilməlidir. Valideyn və uşaq ayrı otaqlarda, sakit və diqqət 
+
+dağıdıcı olmayan mühitdə sorğulanır.</li>
+            <li><strong>2.2. İcazə:</strong> Valideyndən yazılı məlumatlandırılmış razılıq alınır. Uşağa testin məqsədi sadə dildə izah edilir.</li>
+            <li><strong>2.3. Tətbiq müddəti:</strong> Hər bir forma (valideyn və uşaq) təxminən 20-25 dəqiqə çəkir. Uşağın yorğunluğu nəzərə alınaraq fasilə verilə 
+
+bilər.</li>
+            <li><strong>2.4. Cavablandırma tərzi:</strong> Hər sual 0 (“Heç vaxt”) – 4 (“Həmişə”) arasında Likert şkalası ilə qiymətləndirilir. Bəzi suallar əks kodlanıb 
+
+(qarşısında “(əks)” işarəsi var).</li>
+            <li><strong>2.5. Yaş məhdudiyyəti:</strong> Uşaq forması 8-15 yaş arası uşaqlar üçün nəzərdə tutulub. Daha kiçik yaşlarda valideyn forması və klinik müşahidə 
+
+üstünlük təşkil edir.</li>
+            <li><strong>2.6. Məlumatların qeydiyyatı:</strong> Cavablar sistemə daxil edildikdən sonra “Klinik analiz & şkala hesabla” düyməsi ilə nəticələr avtomatik 
+
+hesablanır. Hər bir domen üzrə faiz şkalası (0-100%) təqdim olunur.</li>
+            <li><strong>2.7. Nəticələrin şərhi:</strong> Nəticələr <strong>yalnız klinik mühakimə ilə birlikdə</strong> qiymətləndirilməlidir. Heç bir avtomatik cavab real 
+
+diaqnoz əvəzi deyil.</li>
+        </ul>
+        
+        <h3>📊 3. Normativ məlumat və şkala (Türkiyə uyğunlaşması)</h3>
+        <ul>
+            <li><strong>0-40% (Aşağı çətinlik):</strong> Normativ diapazon. Uşağın bu domen üzrə yaşıdlarından əhəmiyyətli fərqi yoxdur. Müdaxilə tələb olunmur, lakin 
+
+monitorinq davam etdirilə bilər.</li>
+            <li><strong>41-70% (Orta çətinlik / Subklinik risk):</strong> Yaşıdlarına nisbətən daha yüksək əlamətlər. Profilaktik CBT strategiyaları (psixoedukasiya, 
+
+valideyn təlimi, qrup bacarıqları) tövsiyə olunur.</li>
+            <li><strong>71-100% (Yüksək klinik əhəmiyyət):</strong> Klinik səviyyədə çətinlik. Strukturlaşdırılmış CBT proqramı (FYF, Cool Kids, SNAP, SAS) və mütəmadi 
+
+terapiya sessiyaları ehtiyacı olduqca yüksəkdir.</li>
+        </ul>
+        <p><i class="fas fa-info-circle"></i> <strong>Qeyd:</strong> Türkiyə normativləri Azərbaycan üçün keçici əsas ola bilər, lakin yerli validasiya aparılana qədər 
+
+nəticələr tövsiyə xarakterlidir.</p>
+        
+        <h3>🧠 4. CBT domenlərinin təsviri</h3>
+        <ul>
+            <li><strong>A (Anksiyete):</strong> Qorxu, narahatlıq, gərginlik, ayrılma, sosial fobiya və somatik şikayətlər.</li>
+            <li><strong>E (Emosional tənzimləmə):</strong> Qəzəb, məyusluq, duyğu partlayışları, affektiv qeyri-sabitlik.</li>
+            <li><strong>S (Sosial bacarıqlar):</strong> Dostluq münasibətləri, empatiya, növbə gözləmə, ünsiyyət qurma.</li>
+            <li><strong>B (Davranış & impulsivlik):</strong> Təkrarlanan hərəkətlər, qaydalara riayət, aqressiya, impuls nəzarəti.</li>
+            <li><strong>D (Gündəlik fəaliyyət):</strong> Öz qulluq, ev tapşırıqları, yuxu, qidalanma, rutin bacarıqlar.</li>
+        </ul>
+        
+        <h3>⚠️ 5. Etik və peşəkar qaydalar</h3>
+        <ul>
+            <li>Test nəticələri qəti diaqnoz qoymaq üçün kifayət deyil; klinik müsahibə və müşahidə mütləqdir.</li>
+            <li>Məlumatlar GDPR və Azərbaycanın məxfilik qanunlarına uyğun olaraq şifrələnmiş lokal yaddaşda saxlanılır.</li>
+            <li>Yalnız mərkəzin lisenziyalı psixoloqları testi tətbiq edə və nəticələri şərh edə bilər.</li>
+            <li>Hər bir test sessiyasından sonra psixoloq öz peşəkar qeydlərini əlavə etməlidir.</li>
+        </ul>
+        
+        <button id="closeGuideBtn" class="btn-outline" style="margin-top:20px;">Bağla</button>
     </div>
 </div>
 
 <script>
-    // modal
-    const modal = document.getElementById('guideModal');
-    document.getElementById('openGuideBtn').onclick = () => modal.style.display = 'flex';
-    document.querySelector('.close-modal').onclick = () => modal.style.display = 'none';
-    document.getElementById('closeGuideBtn').onclick = () => modal.style.display = 'none';
-    window.onclick = (e) => { if(e.target === modal) modal.style.display = 'none'; };
+    // modal idarəsi (klinik təlimat)
+    const modalElem = document.getElementById('guideModal');
+    document.getElementById('openGuideBtn').onclick = () => modalElem.style.display = 'flex';
+    document.querySelector('.close-modal').onclick = () => modalElem.style.display = 'none';
+    document.getElementById('closeGuideBtn').onclick = () => modalElem.style.display = 'none';
+    window.onclick = (e) => { if(e.target === modalElem) modalElem.style.display = 'none'; };
 
-    // yaddaş
+    // lokal yaddaş (testləri saxlama) – əvvəlki ilə eyni, dəyişməz
     let savedTests = JSON.parse(localStorage.getItem('an_cbt_clinical_20')) || [];
     function getAnswers() {
         let parent={}, child={};
@@ -332,7 +633,9 @@
         if(!name||!surname) { alert('Ad və soyad daxil edin'); return; }
         let {parent, child, pCount, cCount} = getAnswers();
         if(pCount!==20 || cCount!==20) { alert(`Bütün sualları cavablandırın! Valideyn: ${pCount}/20, Uşaq: ${cCount}/20`); return; }
-        savedTests.push({id:Date.now(), childName:name, childSurname:surname, age:document.getElementById('childAge').value, specialist:document.getElementById('specialist').value, date:new Date().toLocaleString(), parent, child});
+        savedTests.push({id:Date.now(), childName:name, childSurname:surname, age:document.getElementById('childAge').value, specialist:document.getElementById
+
+('specialist').value, date:new Date().toLocaleString(), parent, child});
         localStorage.setItem('an_cbt_clinical_20', JSON.stringify(savedTests));
         alert('Test yadda saxlanıldı');
     });
@@ -342,7 +645,7 @@
         console.table(savedTests);
     });
 
-    // hesablama
+    // hesablama (dəyişməz)
     document.getElementById('calculateSimBtn').addEventListener('click', () => {
         let {parent, child, pCount, cCount} = getAnswers();
         if(pCount!==20 || cCount!==20) { alert(`Zəhmət olmasa bütün sualları cavablandırın (Parent:${pCount}/20, Child:${cCount}/20)`); return; }
@@ -374,10 +677,16 @@
         }
 
         const domainNames = {A:"Anksiyete (narahatlıq)", E:"Emosional tənzimləmə", S:"Sosial bacarıqlar", B:"Davranış & impulsivlik", D:"Gündəlik fəaliyyət"};
-        const scientific = {A:"GAD, sosial fobiya meyli", E:"Emosional disrequlyasiya (DMDD)", S:"Sosial praqmatik çətinlik", B:"İmpuls nəzarət pozuğluğu, DEHB", D:"Adaptiv funksionallıq geriliyi"};
-        const intervention = {A:"FYF, Cool Kids: tədricən məruz qoyma", E:"SNAP, DBT elementləri", S:"SAS proqramı, sosial hekayələr", B:"Müsbət davranış dəstəyi", D:"Vizual cədvəllər, erqoterapiya"};
+        const scientific = {A:"GAD, sosial fobiya meyli", E:"Emosional disrequlyasiya (DMDD)", S:"Sosial praqmatik çətinlik", B:"İmpuls nəzarət pozuğluğu, DEHB", 
 
-        let html = `<div class="alert-note"><i class="fas fa-stethoscope"></i> <strong>Klinik analiz (Türkiyə normativlərinə əsaslanır):</strong> Aşağıdakı şkala faizləri klinik mühakimə üçün istiqamətləndiricidir. Hər domen üzrə 70% üzəri əlavə dəstək ehtiyacını göstərir.</div>`;
+D:"Adaptiv funksionallıq geriliyi"};
+        const intervention = {A:"FYF, Cool Kids: tədricən məruz qoyma", E:"SNAP, DBT elementləri", S:"SAS proqramı, sosial hekayələr", B:"Müsbət davranış dəstəyi", 
+
+D:"Vizual cədvəllər, erqoterapiya"};
+
+        let html = `<div class="alert-note"><i class="fas fa-stethoscope"></i> <strong>Klinik analiz (Türkiyə normativlərinə əsaslanır):</strong> Aşağıdakı şkala 
+
+faizləri klinik mühakimə üçün istiqamətləndiricidir. Hər domen üzrə 70% üzəri əlavə dəstək ehtiyacını göstərir.</div>`;
         for(let d of ['A','E','S','B','D']) {
             let perc = results[d].percent;
             let level = perc>70 ? "Yüksək klinik ehtiyac" : (perc>40 ? "Subklinik/orta risk" : "Normativ diapazon");
@@ -388,12 +697,20 @@
                 <div><strong>📈 Faiz şkalası:</strong> ${perc.toFixed(1)}% (0% aşağı, 100% yüksək çətinlik)</div>
                 <div><i class="fas fa-microscope"></i> <strong>Mümkün elmi izah:</strong> ${scientific[d]}</div>
                 <p><strong>💡 CBT tövsiyəsi:</strong> ${intervention[d]}</p>
-                <p><em>Qeyd: Türkiyə normativləri üzrə kəsilmə balları klinik mühakimə ilə birlikdə qiymətləndirilməlidir.</em></p>
+                <p><em>Qeyd: Normativləri üzrə kəsilmə balları klinik mühakimə ilə birlikdə qiymətləndirilməlidir.</em></p>
             </div>`;
         }
         let avgTotal = (results.A.percent+results.E.percent+results.S.percent+results.B.percent+results.D.percent)/5;
-        html += `<div class="specialist-note"><i class="fas fa-user-md"></i> <strong>Psixoloqun rəyi (töhfə sahəsi):</strong> Ümumi çətinlik indeksi ${avgTotal.toFixed(0)}% . ${avgTotal>60 ? "Mütləq strukturlaşdırılmış CBT proqramı və valideyn təlimi tövsiyə olunur." : (avgTotal>40 ? "Profilaktik CBT strategiyaları faydalı ola bilər." : "Normativ diapazon, lakin klinik mühakimə vacibdir.")}<br><textarea rows="3" style="width:100%; margin-top:12px; border-radius:24px; padding:10px;" placeholder="Psixoloqun əlavə qeydləri..."></textarea></div>`;
-        html += `<div style="margin-top:20px; text-align:center;"><button id="saveHtmlFull" class="btn-outline" style="background:#1f5e3a; color:white;"><i class="fas fa-download"></i> Nəticəni HTML fayl kimi yadda saxla</button></div>`;
+        html += `<div class="specialist-note"><i class="fas fa-user-md"></i> <strong>Psixoloqun rəyi (töhfə sahəsi):</strong> Ümumi çətinlik indeksi ${avgTotal.toFixed
+
+(0)}% . ${avgTotal>60 ? "Mütləq strukturlaşdırılmış CBT proqramı və valideyn təlimi tövsiyə olunur." : (avgTotal>40 ? "Profilaktik CBT strategiyaları faydalı ola bilər." 
+
+: "Normativ diapazon, lakin klinik mühakimə vacibdir.")}<br><textarea rows="3" style="width:100%; margin-top:12px; border-radius:24px; padding:10px;" 
+
+placeholder="Psixoloqun əlavə qeydləri..."></textarea></div>`;
+        html += `<div style="margin-top:20px; text-align:center;"><button id="saveHtmlFull" class="btn-outline" style="background:#1f5e3a; color:white;"><i class="fas 
+
+fa-download"></i> Nəticəni HTML fayl kimi yadda saxla</button></div>`;
         document.getElementById('resultsArea').innerHTML = html;
         document.getElementById('resultsArea').style.display = 'block';
         document.getElementById('saveHtmlFull')?.addEventListener('click', () => {
@@ -402,7 +719,13 @@
             let content = document.getElementById('resultsArea').cloneNode(true);
             let style = document.createElement('style');
             style.textContent = `body { font-family: 'Inter', sans-serif; padding: 40px; background: white; } .domain-card { margin-bottom: 20px; }`;
-            let doc = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>AN CBT Nəticə ${name} ${surname}</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">${style.outerHTML}</head><body><h2>AN Psixoloji Dəstək Mərkəzi</h2><p><strong>Uşaq:</strong> ${name} ${surname} | <strong>Yaş:</strong> ${document.getElementById('childAge').value} | <strong>Psixoloq:</strong> ${document.getElementById('specialist').value} | ${new Date().toLocaleString()}</p>${content.innerHTML}</body></html>`;
+            let doc = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>AN CBT Nəticə ${name} ${surname}</title><link href="https://fonts.googleapis.com/css2?
+
+family=Inter:wght@400;600;700&display=swap" rel="stylesheet">${style.outerHTML}</head><body><h2>AN Psixoloji Dəstək Mərkəzi</h2><p><strong>Uşaq:</strong> ${name} 
+
+${surname} | <strong>Yaş:</strong> ${document.getElementById('childAge').value} | <strong>Psixoloq:</strong> ${document.getElementById('specialist').value} | ${new 
+
+Date().toLocaleString()}</p>${content.innerHTML}</body></html>`;
             let blob = new Blob([doc], {type: 'text/html'});
             let a = document.createElement('a');
             a.href = URL.createObjectURL(blob);
