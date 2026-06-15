@@ -211,6 +211,15 @@
         .test-list-item:hover { background: #f1f5f9; }
         @media (max-width: 1000px) { .two-col { grid-template-columns: 1fr; } }
     </style>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#5a2d82">
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/cbt/service-worker.js');
+        });
+      }
+    </script>
 </head>
 <body>
 <div class="container">
