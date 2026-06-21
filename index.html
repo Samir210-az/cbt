@@ -214,7 +214,14 @@
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#5a2d82">
     <script>
-
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/cbt/service-worker.js');
+        });
+      }
+    </script>
+<script src="licenses-data.js"></script>
+<script src="license-check.js" data-tool="cbt"></script>
 </head>
 <body>
 <div class="container">
