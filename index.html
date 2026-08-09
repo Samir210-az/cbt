@@ -265,6 +265,25 @@
     </script>
 <script src="licenses-data.js"></script>
 <script src="license-check.js" data-tool="cbt"></script>
+<script>
+(function(){
+  document.addEventListener('DOMContentLoaded', function(){
+    if(window.LICENSE && LICENSE.init){
+      LICENSE.init('#anpGateArea', 'input[type=radio]');
+    }
+    var tapEl = document.getElementById('anpLogoTap');
+    if(tapEl){
+      var tapCount = 0, tapTimer = null;
+      tapEl.addEventListener('click', function(){
+        tapCount++;
+        clearTimeout(tapTimer);
+        if(tapCount >= 5){ tapCount = 0; location.href = 'admin.html'; return; }
+        tapTimer = setTimeout(function(){ tapCount = 0; }, 900);
+      });
+    }
+  });
+})();
+</script>
 </head>
 <body>
 <div class="container">
@@ -275,7 +294,7 @@
 
     <div class="header-card">
         <div class="logo-area">
-            <h2><i class="fas fa-brain"></i> AN Psixoloji Dəstək Mərkəzi</h2>
+            <h2 id="anpLogoTap" style="cursor:default"><i class="fas fa-brain"></i> AN Psixoloji Dəstək Mərkəzi</h2>
             <p>SCARED əsaslı klinik narahatlıq skrininqi | Rəsmi Birmaher bal açarı (1999)</p>
         </div>
         <div class="participant-form">
@@ -293,7 +312,7 @@
         <button id="openGuideBtn" class="btn-outline" style="background:#eef2ff; border-color:#8ba9c7;"><i class="fas fa-book-open"></i> Klinik təlimat & normativ məlumat</button>
     </div>
 
-    <div class="two-col">
+    <div class="two-col" id="anpGateArea">
         <!-- VALİDEYN SORĞUSU (SCARED-P, 41 bənd) -->
         <div class="question-card">
             <div class="card-header"><i class="fas fa-users"></i> Valideyn sorğusu — SCARED-P (41 sual)</div>
