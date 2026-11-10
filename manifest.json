@@ -2,7 +2,7 @@
   "name": "CBT Test",
   "short_name": "CB",
   "description": "CBT Test tətbiqi",
-  "start_url": "/cbt/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#5a2d82",
   "theme_color": "#5a2d82",
