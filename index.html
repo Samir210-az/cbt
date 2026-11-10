@@ -144,6 +144,12 @@
             color: var(--bordo);
         }
         .card-header i { background: var(--cream); color: var(--bordo); padding: 12px; border-radius: 60px; font-size: 1.4rem; }
+        .sorgu-toggle { width: 100%; background: none; border: none; border-bottom: 3px solid var(--line); text-align: left; cursor: pointer; }
+        .sorgu-toggle[aria-expanded="false"] { border-bottom-color: transparent; padding-bottom: 0; margin-bottom: 0; }
+        .sorgu-toggle:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; border-radius: 8px; }
+        .card-header .sorgu-ox { margin-left: auto; background: none; padding: 0; font-size: 1.1rem; transition: transform .25s; }
+        .sorgu-toggle[aria-expanded="true"] .sorgu-ox { transform: rotate(180deg); }
+        @media (prefers-reduced-motion: reduce) { .card-header .sorgu-ox { transition: none; } }
         .question-item {
             margin-bottom: 28px;
             padding-bottom: 12px;
@@ -316,8 +322,8 @@
     <div class="two-col" id="anpGateArea">
         <!-- VALİDEYN SORĞUSU (SCARED-P, 41 bənd) -->
         <div class="question-card">
-            <div class="card-header"><i class="fas fa-users"></i> Valideyn sorğusu — SCARED-P (41 sual)</div>
-            <form id="parentForm">
+            <button type="button" class="card-header sorgu-toggle" aria-expanded="false" aria-controls="parentForm"><i class="fas fa-users"></i> Valideyn sorğusu — SCARED-P (41 sual)<i class="fas fa-chevron-down sorgu-ox" aria-hidden="true"></i></button>
+            <form id="parentForm" hidden>
                 <div class="question-item" data-domain="PN" data-itemnum="1"><div class="question-text"><i class="fas fa-wind"></i> 1. Uşağım qorxanda nəfəs alması ona çətin olur.</div><div class="options"><label><input type="radio" name="p1" value="0"> Mənə uyğun deyil / demək olar ki heç vaxt</label><label><input type="radio" name="p1" value="1"> Qismən uyğundur / bəzən</label><label><input type="radio" name="p1" value="2"> Tam uyğundur / tez-tez</label></div></div>
                 <div class="question-item" data-domain="SCH" data-itemnum="2"><div class="question-text"><i class="fas fa-head-side-virus"></i> 2. Uşağım məktəbdə olanda başı ağrıyır.</div><div class="options"><label><input type="radio" name="p2" value="0"> Mənə uyğun deyil / demək olar ki heç vaxt</label><label><input type="radio" name="p2" value="1"> Qismən uyğundur / bəzən</label><label><input type="radio" name="p2" value="2"> Tam uyğundur / tez-tez</label></div></div>
                 <div class="question-item" data-domain="SOC" data-itemnum="3"><div class="question-text"><i class="fas fa-user-group"></i> 3. Uşağım yaxşı tanımadığı insanlarla olmağı sevmir.</div><div class="options"><label><input type="radio" name="p3" value="0"> Mənə uyğun deyil / demək olar ki heç vaxt</label><label><input type="radio" name="p3" value="1"> Qismən uyğundur / bəzən</label><label><input type="radio" name="p3" value="2"> Tam uyğundur / tez-tez</label></div></div>
@@ -364,8 +370,8 @@
 
         <!-- UŞAQ SORĞUSU (SCARED-C, 41 bənd) -->
         <div class="question-card">
-            <div class="card-header"><i class="fas fa-child"></i> Uşaq sorğusu (8-18 yaş) — SCARED-C (41 sual)</div>
-            <form id="childForm">
+            <button type="button" class="card-header sorgu-toggle" aria-expanded="false" aria-controls="childForm"><i class="fas fa-child"></i> Uşaq sorğusu (8-18 yaş) — SCARED-C (41 sual)<i class="fas fa-chevron-down sorgu-ox" aria-hidden="true"></i></button>
+            <form id="childForm" hidden>
                 <div class="question-item" data-domain="PN" data-itemnum="1"><div class="question-text"><i class="fas fa-wind"></i> 1. Qorxduğum zaman nəfəs almaq mənə çətin olur.</div><div class="options"><label><input type="radio" name="c1" value="0"> Mənə uyğun deyil / demək olar ki heç vaxt</label><label><input type="radio" name="c1" value="1"> Qismən uyğundur / bəzən</label><label><input type="radio" name="c1" value="2"> Tam uyğundur / tez-tez</label></div></div>
                 <div class="question-item" data-domain="SCH" data-itemnum="2"><div class="question-text"><i class="fas fa-head-side-virus"></i> 2. Məktəbdə olanda başım ağrıyır.</div><div class="options"><label><input type="radio" name="c2" value="0"> Mənə uyğun deyil / demək olar ki heç vaxt</label><label><input type="radio" name="c2" value="1"> Qismən uyğundur / bəzən</label><label><input type="radio" name="c2" value="2"> Tam uyğundur / tez-tez</label></div></div>
                 <div class="question-item" data-domain="SOC" data-itemnum="3"><div class="question-text"><i class="fas fa-user-group"></i> 3. Yaxşı tanımadığım insanlarla olmağı sevmirəm.</div><div class="options"><label><input type="radio" name="c3" value="0"> Mənə uyğun deyil / demək olar ki heç vaxt</label><label><input type="radio" name="c3" value="1"> Qismən uyğundur / bəzən</label><label><input type="radio" name="c3" value="2"> Tam uyğundur / tez-tez</label></div></div>
@@ -469,6 +475,16 @@
   });
   mo.observe(el, {childList:true, subtree:true, characterData:true});
 })();
+</script>
+<script>
+document.querySelectorAll('.sorgu-toggle').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var form = document.getElementById(btn.getAttribute('aria-controls'));
+    var open = btn.getAttribute('aria-expanded') !== 'true';
+    btn.setAttribute('aria-expanded', open);
+    form.hidden = !open;
+  });
+});
 </script>
 </body>
 </html>
